@@ -1,0 +1,8 @@
+package com.tfactory.web;
+
+import org.apache.log4j.Logger;
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+
+public class OpenHandler extends HandlerInterceptorAdapter {
+	private static final Logger logger = Logger.getLogger(OpenHandler.class);
+}

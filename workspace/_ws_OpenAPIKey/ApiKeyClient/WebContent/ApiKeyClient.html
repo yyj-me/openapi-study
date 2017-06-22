@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>http://jcornor.com:8000</title>
+<script type="text/javascript" src="js/jquery-1.6.1.js"></script>
+<script type="text/javascript" src="js/cors.js"></script>
+<script type="text/javascript">
+	var apikey = "G79pf2invIPJkdwNygFQ4u/EsYs=";	
+	
+	var url = "http://tfactory.com:8000/ApiKeyProcess/service/countries.json";
+	
+	function getCountries() {
+		//url += "?key=" + apikey;
+		var data = { "key" : apikey };
+	    getCORS(url, data, successCallback);		
+	}
+	
+	function successCallback(data) {
+		var json = jQuery.parseJSON(data);
+		var strout = ""; 
+		if (json.result) {
+			var countries = json.countryList.countries;
+			for (var i=0; i < countries.length; i++) {
+				 var country_id = countries[i].country_id;
+				 var country_name = countries[i].country_name;
+				 var region_name = countries[i].region_name;
+				 
+				 strout += country_id + " : " + country_name + " : " + region_name +"<br>";
+			 }
+			 $("#divData").html(strout);				
+		} else {
+			alert("서버 오류 발생 : " + json.errorMessage);
+		}
+	}
+	
+</script>
+</head>
+<body>
+	<input type="button" value="API KEY 확인하여  JSON 데이터 가져오기" onclick="getCountries()">
+	<div id="divData"></div>
+</body>
+</html>

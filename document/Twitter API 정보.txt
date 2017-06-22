@@ -1,0 +1,12 @@
+### Twitter API Á¤º¸
+
+Consumer Key (API Key)	1kaMBVZa1AEw27fcEYNLZZ2Xx (manage keys and access tokens)
+Consumer Secret (API Secret)	FUYMxmaIlypHeEJ3l0qDWAQpLo5yGlwizRg7meRn8OgpFduFlu
+
+Callback URL	http://jcornor.com:8000/callback
+Callback URL Locked	No
+Sign in with Twitter	Yes
+App-only authentication	https://api.twitter.com/oauth2/token
+Request token URL	https://api.twitter.com/oauth/request_token
+Authorize URL	https://api.twitter.com/oauth/authorize
+Access token URL	https://api.twitter.com/oauth/access_token

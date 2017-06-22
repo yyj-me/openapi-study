@@ -1,0 +1,17 @@
+package com.snj;
+
+import org.apache.log4j.Logger;
+import org.springframework.stereotype.Service;
+
+@Service("TFactoryConnectService")
+public class TFactoryConnectService {
+	private static Logger logger = Logger.getLogger(TFactoryConnectService.class);
+	
+	private static final String CONNECT_URL_CODE = "http://tFactory.com:8000/tFactory/model/open/json/";
+	
+	public String connectTFactory(String code) {
+		if(code == null || code.equals("")) {
+			code = "all";
+		}
+	}
+}

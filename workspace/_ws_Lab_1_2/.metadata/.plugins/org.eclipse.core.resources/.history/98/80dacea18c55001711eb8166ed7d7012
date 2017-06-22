@@ -1,0 +1,16 @@
+package com.tfactory.web;
+
+
+import org.apache.log4j.Logger;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.servlet.View;
+
+@Controller
+public class ModelOpenController {
+	private static Logger logger = Logger.getLogger(ModelOpenController.class);
+	
+	@Resource(name="jsonTemplate")
+	private View jsonView;
+	
+	
+}

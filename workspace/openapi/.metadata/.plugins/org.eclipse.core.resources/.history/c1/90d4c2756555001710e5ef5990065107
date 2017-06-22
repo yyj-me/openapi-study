@@ -1,0 +1,6 @@
+package com.multi.contacts.biz.domain;
+
+public class RESTResult {
+	private String status;
+	
+}

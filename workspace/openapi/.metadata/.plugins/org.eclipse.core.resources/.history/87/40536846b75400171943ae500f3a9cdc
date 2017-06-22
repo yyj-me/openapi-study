@@ -1,0 +1,17 @@
+package com.multi.contacts.biz.dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.ibatis.support.SqlMapClientDaoSupport;
+import org.springframework.stereotype.Repository;
+
+import com.ibatis.sqlmap.client.SqlMapClient;
+
+@Repository
+public class ContactDAO extends SqlMapClientDaoSupport {
+	@Autowired
+	public void setSQLMapClientWrapper(SqlMapClient sqlMapClient) {
+		this.setSqlMapClient(sqlMapClient);		
+	}
+	
+	
+}

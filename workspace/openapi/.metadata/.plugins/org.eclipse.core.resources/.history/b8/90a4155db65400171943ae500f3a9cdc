@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+    
+<sqlMap namespace="contact">
+	<typeAlias alias="contact" type="com.multi.contacts.biz.domain.Contact"/>
+	<select id="selectall" resultClass="contact">
+		SELECT no, name, tel, email FROM contact
+		ORDER BY no DESC		
+	</select>
+	<select id="selectone" resultClass="contact" parameterClass="contact">
+		SELECT no, name, tel, email FROM contact
+		WHERE no=#no#
+	</select>
+	<select id="selectcnt" resultClass="int">
+		SELECT count(*) FROM contact
+	</select>
+	<update id="update" parameterClass="contact">
+		UPDATE contact
+		SET name=#name#, tel=#tel#, email=#email#
+		WHERE no=#no#
+	</update>
+	<delete id="delete" parameterClass="contact">
+		DELETE contact
+		WHERE no=#no#
+	</delete>
+	<insert id="insert" parameterClass="contact">
+		<selectKey keyProperty="no" resultClass="int">
+			SELECT NVL(MAX(no), 0) + 1 AS nextno FROM contact
+		</selectKey>
+		INSERT INTO contact(no, name, tel, email)
+		VALUES (#no#, #name#, #tel#, #email#)
+	</insert>
+</sqlMap>    

@@ -1,0 +1,56 @@
+package com.snj;
+
+import java.io.IOException;
+
+import javax.annotation.Resource;
+
+import org.apache.commons.httpclient.HttpException;
+import org.apache.log4j.Logger;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+
+@Controller
+public class SNJController {
+
+	private static Logger logger = Logger.getLogger(SNJController.class);
+	
+	@Resource(name="TFactoryConnectService")
+	private TFactoryConnectService tFactoryConnectService;
+	
+	@RequestMapping("/connect")
+	public ModelAndView connect(@RequestParam(value="tcode", required=false) String code) {
+		String result = "";
+		if(code == null) {
+			code = "all";
+		}
+		try {
+			result = tFactoryConnectService.connectTFactory(code);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("json", result);
+		mav.setViewName("getJsonTModel");
+		return mav;
+	}
+	
+	public String viewModel2() {
+		return "viewModel2";
+	}
+	
+	@RequestMapping("/main")
+	public String getMainPage(){
+		logger.info("main...............");
+		return "main";
+	}
+	
+	@RequestMapping("/viewModel")
+	public String viewModel() {
+		logger.info("view1");
+		return "viewModel";
+	}
+}

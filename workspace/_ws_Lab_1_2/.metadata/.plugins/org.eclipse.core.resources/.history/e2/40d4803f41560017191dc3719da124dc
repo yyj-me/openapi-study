@@ -1,0 +1,6 @@
+package com.snj;
+
+@Service("TFactoryConnectService")
+public class TFactoryConnectService {
+
+}

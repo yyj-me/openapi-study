@@ -1,0 +1,36 @@
+package com.multi.contacts.view.controller;
+
+import javax.annotation.Resource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.View;
+
+import com.multi.contacts.biz.domain.ContactList;
+import com.multi.contacts.biz.service.ContactService;
+
+@Controller
+@RequestMapping(value="/contacts")
+public class ContactController {
+	@Resource(name="xmlView")
+	private View xmlView;
+	@Resource(name="jsonView")
+	private View jsonView;
+	@Autowired
+	private ContactService contactService;
+	
+	@RequestMapping(method=RequestMethod.GET)
+	public ModelAndView getContacts(
+			@RequestParam(value="pageno", required=false, defaultValue="0") int pageno, 
+			@RequestParam(value="pagesize", required=false, defaultValue="0") int pagesize) {
+		ContactList contactList = contactService.getSelectAll();
+		ModelAndView mav = new ModelAndView();
+		mav.setView(jsonView);
+		mav.addObject("data", contactList);
+		return mav;
+	}	
+}

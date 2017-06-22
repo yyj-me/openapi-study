@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
+<script type="text/javascript">
+	$.get("/contactsvc/contacts", {pageno:1}, function(data) {
+		console.log(data);
+	});
+	
+	
+	
+
+
+</script>
+</head>
+<body>
+	TEST
+</body>
+</html>

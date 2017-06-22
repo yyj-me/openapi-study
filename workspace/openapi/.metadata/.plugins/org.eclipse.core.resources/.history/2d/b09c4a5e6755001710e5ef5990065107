@@ -1,0 +1,46 @@
+package com.multi.contacts.biz.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.multi.contacts.biz.dao.ContactDAO;
+import com.multi.contacts.biz.domain.Contact;
+import com.multi.contacts.biz.domain.ContactList;
+
+@Service
+public class ContactService {
+	@Autowired
+	private ContactDAO contactDAO;
+	
+	public ContactList getSelectAll() {
+		
+		List<Contact> contacts = contactDAO.getSelectAll();
+		
+	}
+	
+	public ContactList getSelectAll(int pageno, int pagesize) {
+		return contactDAO.getSelectAll(pageno, pagesize);				
+	}
+	
+	public Contact getSelectOne(Contact contact) {
+		return contactDAO.getSelectOne(contact);				
+	}
+	
+	public int getSelectCnt() {
+		return contactDAO.getSelectCnt();
+	}
+	
+	public int insertContact(Contact contact) {
+		return contactDAO.insertContact(contact);
+	}
+	
+	public int updateContact(Contact contact) {
+		return contactDAO.updateContact(contact);
+	}
+	
+	public int deleteContact(Contact contact) {
+		return contactDAO.deleteContact(contact);
+	}
+}

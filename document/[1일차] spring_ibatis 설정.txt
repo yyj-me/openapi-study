@@ -1,0 +1,78 @@
+[ SPRING + IBATIS 설정 ]
+
+0. 기본 설정 
+ 가. Eclipse에서 Dynamic Web Project 생성
+ 나. 필요한 jar 파일들(Spring, iBatis, Gson, oracle jdbc driver등) WebContent/WEB-INF/lib에 복사
+
+
+1. Web.xml 작성
+ 가. DispatcherServlet + URL Pattern 지정
+    - initParam으로 contextConfigLoction 지정 : ex) spring-mvc.xml 또는 dispatcher-servlet.xml
+ 나. ContextLoaderListener 등록 후 context-param 등록 ex) spring-service.xml 또는 applicationContext.xml
+ 다. Encoding용 Servlet Filter 지정 : 한글 깨짐 방지
+
+
+2. spring-service.xml 작성
+ 가. iBatis 관련 bean 설정
+    - Data Source bean 설정
+    - sqlMapClient bean 설정 : sqlMapConfig.xml의 경로 지정
+ 나. Server, Repository관련 bean 설정
+    - <context:component-scan base-package="[상위 패키지 명]" />
+
+3. spring-mvc.xml 설정
+ 가. viewResolver 등록
+    - InternalResourceViewResolver 등록 : prefix와 suffix 값 설정
+ 나. XmlView나 JsonView를 위한 설정 
+    - Jaxb2Marshaller bean 등록
+    - MarshallingView 등록
+    - MappingJacksonJsonView 등록
+ 다. Controller 관련 bean 설정
+    - <context:component-scan base-package="[상위 패키지 명]" /> 을 이용
+
+4. VO Class 정의
+ 가. VO 클래스 정의
+   - OXM(Object XML Mapping)이 필요하다면 Annotation을 추가한다.
+   - @XmlRootElement 등
+   - JSON만을 위한 VO라면 OXM은 필요치 않다.
+
+5. iBatis 설정
+ 가. 2-가 에 설정된 sqlMapConfig 경로에 따라 파일 작성
+   - sqlMapConfig 태그 작성
+   - settings 태그 설정(기본값으로 해도 무방- useStatementNamespaces="true" 로 지정하면 sqlMap 태그의 namespace까지를 식별자로 사용함)
+   - sqlMap 태그 작성하고 resource 파일 위치 지정
+ 나. 하위 resource mapping 파일 작성
+   - sqlMap태그 작성
+   - select, insert, update, delete 태그로 실행할 sql, Stored Procedure 지정
+   
+6. DAO 클래스 작성
+ 가. @Repository annotation 사용
+   - name 속성으로 bean id 지정가능. 지정않으면 class 명에서 첫글자를 소문자로 바꾼 이름이 자동 지정
+ 나. SqlMapClientDaoSupport 상속받아 작성
+ 다. sqlMapClient bean 주입(injection)
+    @Resource(name="sqlMapClient")
+    public void setSqlMapClientTemplate(SqlMapClient client) {
+	this.setSqlMapClient(client);
+    }
+ 라. 각 DAO 메서드에서 sqlMapClient또는 sqlMapClientTemplate 객체를 이용해 sqlMap 의 sql을 실행
+    public List<Country> getAllCountries() throws Exception {
+	logger.info("DAO-getCountriesAll");
+
+	List<Country> list = (List<Country>)getSqlMapClientTemplate().queryForList("country.selectAll");
+	return list;
+    }	
+
+7. Service 클래스 작성
+  가. @Service Annotation 사용
+    - bean name에 관한 특성은 6-가와 동일
+  나. 사용하고자 하는 DAO 클래스들을 전역 변수로 선언하고 @Resource 또는 @AutoWired를 이용해 주입함.
+  다. Method 작성
+
+8. Controller 클래스 작성
+  가. @Controller Annotation 사용
+  나. 사용하고자 하는 Service 클래스들을 전역변수로 선언하고 @Resource 또는 @AutoWired를 이용해 주입함.
+  다. 다음의 annotation을 이용해 Action 메서드 작성
+    - @RequestMapping, @RequestParam, @PathVariable 등
+
+9. JSP 
+  가. 8-다의 Action 메서드에서 View가 문자열로 지정되면 View는 jsp가 실행된 결과가 됨.
+  나. ModelAndView 객체에 추가된 object는 jsp에서 request.getAttribute로 획득함.

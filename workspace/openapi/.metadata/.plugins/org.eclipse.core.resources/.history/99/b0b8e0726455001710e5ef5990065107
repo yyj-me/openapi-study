@@ -1,0 +1,8 @@
+package com.multi.contacts.biz.domain;
+
+public class ContactList {
+	private int pageNo;
+	private int pageSize;
+	private int totalCount;
+	private List<Contact> contacts;
+}

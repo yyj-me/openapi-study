@@ -1,0 +1,5 @@
+package com.multi.contacts.biz.service;
+
+public class ContactService {
+
+}

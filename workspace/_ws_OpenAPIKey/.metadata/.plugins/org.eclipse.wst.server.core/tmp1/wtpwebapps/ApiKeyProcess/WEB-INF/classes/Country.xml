@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+    
+<sqlMap namespace="Country">
+  
+  <select id="select" parameterClass="java.lang.String" resultClass="com.sds.hr.vo.Country">
+    
+    select country_id, country_name, region_name
+    from countries c, regions r
+    where c.region_id = r.region_id AND
+        country_id=#country_id#
+  
+  </select>
+  
+  <select id="selectAll" resultClass="com.sds.hr.vo.Country">
+    
+    select country_id, country_name, region_name
+    from countries c, regions r
+    where c.region_id = r.region_id
+  
+  </select>
+  
+  <update id="updateCountry" parameterClass="com.sds.hr.vo.Country">
+  	update countries 
+  	SET country_name=#country_name#
+  	WHERE country_id=#country_id#
+  </update>
+  
+</sqlMap>    

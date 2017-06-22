@@ -1,0 +1,23 @@
+package com.tfactory.web;
+
+
+import javax.annotation.Resource;
+
+import org.apache.log4j.Logger;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.servlet.View;
+
+@Controller
+public class ModelOpenController {
+	private static Logger logger = Logger.getLogger(ModelOpenController.class);
+	
+	@Resource(name="jsonTemplate")
+	private View jsonView;
+	
+	@Resource(name="xmlTemplate")
+	private View xmlView;
+	
+	
+	
+	
+}

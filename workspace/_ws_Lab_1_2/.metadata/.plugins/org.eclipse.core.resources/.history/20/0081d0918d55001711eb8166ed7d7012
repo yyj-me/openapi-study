@@ -1,0 +1,7 @@
+package com.tfactory.web;
+
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+
+public class OpenHandler extends HandlerInterceptorAdapter {
+	
+}

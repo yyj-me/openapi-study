@@ -1,0 +1,8 @@
+INDEX VERSION 1.3+C:\dev\workspace\_ws_Lab_OpenAPIKey\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1678522828.index
+1186482981.index
+2687596384.index
+4086481341.index
+1731032655.index
+2022506590.index
+3824770962.index

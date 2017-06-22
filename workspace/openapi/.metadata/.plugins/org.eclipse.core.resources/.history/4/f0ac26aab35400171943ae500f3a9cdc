@@ -1,0 +1,5 @@
+package com.multi.contacts.biz.domain;
+
+public class Contact {
+
+}

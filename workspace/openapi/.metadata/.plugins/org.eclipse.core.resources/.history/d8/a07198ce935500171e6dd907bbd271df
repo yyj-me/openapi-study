@@ -1,0 +1,23 @@
+package httpclient_test;
+
+import org.apache.commons.httpclient.HttpClient;
+import org.apache.commons.httpclient.methods.GetMethod;
+import org.apache.commons.httpclient.methods.PostMethod;
+
+public class Test02 {
+
+	public static void main(String[] args) {
+		HttpClient client = new HttpClient();
+		client.getParams().setContentCharset("utf-8");
+		
+		String url = "http://70.12.107.190:8000/contactsvc/contacts";
+		PostMethod method = new PostMethod(url);
+		
+		method.setRequestHeader("Content-type", "application/json");
+		method.setRequestBody("{\"name\":\"정유라\", \"tel\":\"010-2222-9999\"}");
+		
+		
+		
+	}
+
+}

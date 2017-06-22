@@ -1,0 +1,11 @@
+package com.tfactory.web;
+
+import org.apache.log4j.Logger;
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class ModelOpenController {
+	private static Logger logger = Logger.getLogger(ModelOpenController.class);
+	
+	
+}

@@ -1,0 +1,9 @@
+package com.multi.contacts.biz.dao;
+
+import org.springframework.orm.ibatis.support.SqlMapClientDaoSupport;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class ContactDAO extends SqlMapClientDaoSupport {
+	
+}

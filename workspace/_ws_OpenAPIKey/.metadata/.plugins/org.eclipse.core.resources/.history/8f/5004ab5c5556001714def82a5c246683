@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="apiKey">
+  <insert id="insert" parameterClass="org.thinker.openapi.ApiKeyVO">
+  
+   insert into tbl_apikey(hostName, keyValue) values (#hostName#, #apiKey#)
+  
+  </insert>
+  
+  <select id="select" resultClass="org.thinker.openapi.ApiKeyVO" >
+   select hostName, keyValue apikey , cnt count 
+   from tbl_apikey 
+   where hostName = #apikey#
+  </select>
+  
+  <update id="updateCnt">
+  update tbl_apiKey set cnt = cnt+ 1 where hostName = #apikey#
+  </update>
+  
+</sqlMap>    

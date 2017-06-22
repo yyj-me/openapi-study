@@ -1,0 +1,12 @@
+package com.multi.contacts.biz.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.multi.contacts.biz.dao.ContactDAO;
+
+@Service
+public class ContactService {
+	@Autowired
+	private ContactDAO contactDAO
+}

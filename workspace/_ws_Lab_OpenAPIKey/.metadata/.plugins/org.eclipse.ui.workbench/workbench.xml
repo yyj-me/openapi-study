@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench progressCount="69" version="2.0">
+<workbenchAdvisor/>
+<window height="768" maximized="true" width="1024" x="1456" y="88">
+<fastViewData fastViewLocation="1024"/>
+<perspectiveBar>
+<itemSize x="160"/>
+</perspectiveBar>
+<coolbarLayout locked="0">
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="121" y="22"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="124" y="22"/>
+<coolItem id="org.eclipse.jst.j2ee.J2eeMainActionSet" itemType="typeToolBarContribution" x="88" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="98" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="131" y="22"/>
+<coolItem id="org.eclipse.wst.server.ui.internal.webbrowser.actionSet" itemType="typeToolBarContribution" x="39" y="22"/>
+<coolItem id="org.eclipse.wst.ws.explorer.explorer" itemType="typeToolBarContribution" x="39" y="22"/>
+<coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="183" y="22"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.browser.editor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jst.jsp.core.jspsource.source" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page focus="true" label="Workspace - Java EE">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+<part id="11"/>
+<part id="12"/>
+<part id="13"/>
+<part id="14"/>
+<part id="15"/>
+<part id="16"/>
+<part id="17"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ApiKeyProcessor.java" partName="ApiKeyProcessor.java" path="C:/_ws_Lab_OpenAPIKey/tFactory/src/org/thinker/openapi/ApiKeyProcessor.java" title="ApiKeyProcessor.java" tooltip="tFactory/src/org/thinker/openapi/ApiKeyProcessor.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tFactory/src/org/thinker/openapi/ApiKeyProcessor.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2574" selectionTopPixel="1428"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ApiKeyRepository.java" partName="ApiKeyRepository.java" path="C:/_ws_Lab_OpenAPIKey/tFactory/src/org/thinker/openapi/ApiKeyRepository.java" title="ApiKeyRepository.java" tooltip="tFactory/src/org/thinker/openapi/ApiKeyRepository.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tFactory/src/org/thinker/openapi/ApiKeyRepository.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="6" selectionOffset="224" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" name="tFactory.sql" partName="tFactory.sql" path="C:/_ws_Lab_OpenAPIKey/tFactory/src/tFactory.sql" title="tFactory.sql" tooltip="tFactory/src/tFactory.sql" workbook="DefaultEditorWorkbook">
+<input connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" path="/tFactory/src/tFactory.sql"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="221" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ApiKeyHandler.java" partName="ApiKeyHandler.java" path="C:/_ws_Lab_OpenAPIKey/tFactory/src/com/tfactory/openkey/ApiKeyHandler.java" title="ApiKeyHandler.java" tooltip="tFactory/src/com/tfactory/openkey/ApiKeyHandler.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tFactory/src/com/tfactory/openkey/ApiKeyHandler.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1102" selectionTopPixel="112"/>
+</editor>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="web.xml" partName="web.xml" path="C:/_ws_Lab_OpenAPIKey/tFactory/WebContent/WEB-INF/web.xml" title="web.xml" tooltip="tFactory/WebContent/WEB-INF/web.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tFactory/WebContent/WEB-INF/web.xml"/>
+</editor>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="dispatcher-servlet.xml" partName="dispatcher-servlet.xml" path="C:/_ws_Lab_OpenAPIKey/tFactory/WebContent/WEB-INF/dispatcher-servlet.xml" title="dispatcher-servlet.xml" tooltip="tFactory/WebContent/WEB-INF/dispatcher-servlet.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tFactory/WebContent/WEB-INF/dispatcher-servlet.xml"/>
+</editor>
+<editor id="org.eclipse.jst.jsp.core.jspsource.source" name="requestApiKey.jsp" partName="requestApiKey.jsp" path="C:/_ws_Lab_OpenAPIKey/tFactory/WebContent/WEB-INF/jsp/requestApiKey.jsp" title="requestApiKey.jsp" tooltip="tFactory/WebContent/WEB-INF/jsp/requestApiKey.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tFactory/WebContent/WEB-INF/jsp/requestApiKey.jsp"/>
+<editorState selectionHorizontalPixel="272" selectionLength="0" selectionOffset="914" selectionTopPixel="34"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OpenHandler.java" partName="OpenHandler.java" path="C:/_ws_Lab_OpenAPIKey/tFactory/src/com/tfactory/web/OpenHandler.java" title="OpenHandler.java" tooltip="tFactory/src/com/tfactory/web/OpenHandler.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tFactory/src/com/tfactory/web/OpenHandler.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="532" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SNJController.java" partName="SNJController.java" path="C:/_ws_Lab_OpenAPIKey/snj/src/com/snj/SNJController.java" title="SNJController.java" tooltip="snj/src/com/snj/SNJController.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/snj/src/com/snj/SNJController.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="304" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jst.jsp.core.jspsource.source" name="index.jsp" partName="index.jsp" path="C:/_ws_Lab_OpenAPIKey/snj/WebContent/index.jsp" title="index.jsp" tooltip="snj/WebContent/index.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/snj/WebContent/index.jsp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="134" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TraceController.java" partName="TraceController.java" path="C:/_ws_Lab_OpenAPIKey/satellite/src/org/satellite/TraceController.java" title="TraceController.java" tooltip="satellite/src/org/satellite/TraceController.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/satellite/src/org/satellite/TraceController.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="610" selectionTopPixel="265"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TerminatorGeo.java" partName="TerminatorGeo.java" path="C:/_ws_Lab_OpenAPIKey/satellite/src/org/satellite/TerminatorGeo.java" title="TerminatorGeo.java" tooltip="satellite/src/org/satellite/TerminatorGeo.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/satellite/src/org/satellite/TerminatorGeo.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OpenHandler.java" partName="OpenHandler.java" path="C:/_ws_Lab_OpenAPIKey/satellite/src/org/satellite/OpenHandler.java" title="OpenHandler.java" tooltip="satellite/src/org/satellite/OpenHandler.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/satellite/src/org/satellite/OpenHandler.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="753" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="dispatcher-servlet.xml" partName="dispatcher-servlet.xml" path="C:/_ws_Lab_OpenAPIKey/satellite/WebContent/WEB-INF/dispatcher-servlet.xml" title="dispatcher-servlet.xml" tooltip="satellite/WebContent/WEB-INF/dispatcher-servlet.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/satellite/WebContent/WEB-INF/dispatcher-servlet.xml"/>
+</editor>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="web.xml" partName="web.xml" path="C:/_ws_Lab_OpenAPIKey/satellite/WebContent/WEB-INF/web.xml" title="web.xml" tooltip="satellite/WebContent/WEB-INF/web.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/satellite/WebContent/WEB-INF/web.xml"/>
+</editor>
+<editor id="org.eclipse.jst.jsp.core.jspsource.source" name="viewModel.jsp" partName="viewModel.jsp" path="C:/_ws_Lab_OpenAPIKey/snj/WebContent/WEB-INF/jsp/viewModel.jsp" title="viewModel.jsp" tooltip="snj/WebContent/WEB-INF/jsp/viewModel.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/snj/WebContent/WEB-INF/jsp/viewModel.jsp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="840" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jst.jsp.core.jspsource.source" name="main.jsp" partName="main.jsp" path="C:/_ws_Lab_OpenAPIKey/snj/WebContent/WEB-INF/jsp/main.jsp" title="main.jsp" tooltip="snj/WebContent/WEB-INF/jsp/main.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/snj/WebContent/WEB-INF/jsp/main.jsp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1194" selectionTopPixel="204"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jst.jsp.core.jspsource.source" name="viewPosition.jsp" partName="viewPosition.jsp" path="C:/_ws_Lab_OpenAPIKey/snj/WebContent/WEB-INF/jsp/viewPosition.jsp" title="viewPosition.jsp" tooltip="snj/WebContent/WEB-INF/jsp/viewPosition.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/snj/WebContent/WEB-INF/jsp/viewPosition.jsp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="663" selectionTopPixel="0"/>
+</editor>
+</editors>
+<views>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
+<viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
+</view>
+<view id="org.eclipse.ui.views.AllMarkersView" partName="Markers">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.allSeverityField" categoryGroup="org.eclipse.ui.ide.type" markerContentGenerator="org.eclipse.ui.ide.allMarkersGenerator" partName="Markers">
+<columnWidths org.eclipse.ui.ide.allSeverityField="300" org.eclipse.ui.ide.locationField="64" org.eclipse.ui.ide.markerType="94" org.eclipse.ui.ide.pathField="124" org.eclipse.ui.ide.resourceField="94"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.allSeverityField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.wst.common.snippets.internal.ui.SnippetsView" partName="Snippets"/>
+<view id="org.eclipse.ui.views.PropertySheet" partName="Properties"/>
+<view id="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator" partName="Data Source Explorer"/>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
+<view id="org.eclipse.mylyn.tasks.ui.views.tasks" partName="Task List"/>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+<view id="org.eclipse.wst.server.ui.ServersView" partName="Servers">
+<viewState CommonNavigator.LINKING_ENABLED="0"/>
+</view>
+</views>
+<perspectives activePart="org.eclipse.ui.navigator.ProjectExplorer" activePerspective="org.eclipse.jst.j2ee.J2EEPerspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.jst.j2ee.internal.perspective.J2EEPerspective" id="org.eclipse.jst.j2ee.J2EEPerspective" label="Java EE"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.rse.core.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.jst.j2ee.J2eeMainActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.wst.server.ui.internal.webbrowser.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.wst.ws.explorer.explorer"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="org.eclipse.wst.server.ui.ServersView"/>
+<show_view_action id="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator"/>
+<show_view_action id="org.eclipse.ui.views.BookmarkView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.PropertySheet"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<show_view_action id="org.eclipse.wst.common.snippets.internal.ui.SnippetsView"/>
+<show_view_action id="org.eclipse.ui.views.AllMarkersView"/>
+<show_view_action id="org.eclipse.mylyn.tasks.ui.views.tasks"/>
+<show_view_action id="org.eclipse.search.ui.views.SearchView"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<new_wizard_action id="org.eclipse.jpt.ui.wizard.newJpaProject"/>
+<new_wizard_action id="org.eclipse.jst.j2ee.ui.project.facet.EarProjectWizard"/>
+<new_wizard_action id="org.eclipse.jst.servlet.ui.project.facet.WebProjectWizard"/>
+<new_wizard_action id="org.eclipse.jst.ejb.ui.project.facet.EjbProjectWizard"/>
+<new_wizard_action id="org.eclipse.jst.j2ee.jca.ui.internal.wizard.ConnectorProjectWizard"/>
+<new_wizard_action id="org.eclipse.jst.j2ee.ui.project.facet.appclient.AppClientProjectWizard"/>
+<new_wizard_action id="org.eclipse.wst.web.ui.internal.wizards.SimpleWebProjectWizard"/>
+<new_wizard_action id="org.eclipse.jst.servlet.ui.internal.wizard.AddServletWizard"/>
+<new_wizard_action id="org.eclipse.jst.ejb.ui.internal.wizard.AddSessionBeanWizard"/>
+<new_wizard_action id="org.eclipse.jst.ejb.ui.internal.wizard.AddMessageDrivenBeanWizard"/>
+<new_wizard_action id="org.eclipse.jpt.ui.wizard.newEntity"/>
+<new_wizard_action id="org.eclipse.jst.ws.creation.ui.wizard.serverwizard"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<perspective_action id="org.eclipse.jpt.ui.jpaPerspective"/>
+<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaPerspective"/>
+<perspective_action id="org.eclipse.ui.resourcePerspective"/>
+<perspective_action id="org.eclipse.wst.web.ui.webDevPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<view id="org.eclipse.ui.views.AllMarkersView"/>
+<view id="org.eclipse.ui.views.PropertySheet"/>
+<view id="org.eclipse.wst.server.ui.ServersView"/>
+<view id="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator"/>
+<view id="org.eclipse.wst.common.snippets.internal.ui.SnippetsView"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.mylyn.tasks.ui.views.tasks"/>
+<fastViewBars/>
+<layout>
+<mainWindow>
+<info folder="true" part="topLeft">
+<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.PackagesView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@c4fedd" ratio="0.75" ratioLeft="756" ratioRight="252" relationship="2" relative="topLeft">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.19227739" ratioLeft="244" ratioRight="1025" relationship="2" relative="topLeft"/>
+<info folder="true" part="bottomRight" ratio="0.6989247" ratioLeft="455" ratioRight="196" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.AllMarkersView" label="Markers"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
+<page content="org.eclipse.wst.server.ui.ServersView" label="Servers"/>
+<page content="org.eclipse.datatools.connectivity.DataSourceExplorerNavigator" label="Data Source Explorer"/>
+<page content="org.eclipse.wst.common.snippets.internal.ui.SnippetsView" label="Snippets"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="topRight" ratio="0.69973546" ratioLeft="529" ratioRight="227" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.mylyn.tasks.ui.views.tasks" label="Task List"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/snj/WebContent/earthTest.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/snj/WebContent/test.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tFactory/src/org/thinker/openapi/ApiKeyProcessor.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tFactory/src/org/thinker/openapi/ApiKeyRepository.java"/>
+<editor connInfoName="Undefined:::" editorInputType="SQLScrapbookEditorInput" factoryID="org.eclipse.datatools.sqltools.internal.sqlscrapbook.editor.SQLScrapbookEditorInputFactory" id="org.eclipse.datatools.sqltools.sqlscrapbook.SQLScrapbookEditor" path="/tFactory/src/tFactory.sql"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tFactory/src/com/tfactory/openkey/ApiKeyHandler.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/tFactory/WebContent/WEB-INF/web.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/tFactory/WebContent/WEB-INF/dispatcher-servlet.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/tFactory/WebContent/WEB-INF/jsp/requestApiKey.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tFactory/src/com/tfactory/web/OpenHandler.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/snj/src/com/snj/SNJController.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/snj/WebContent/index.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/snj/WebContent/WEB-INF/jsp/viewPosition.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/satellite/src/org/satellite/TraceController.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/satellite/src/org/satellite/TerminatorGeo.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/satellite/src/org/satellite/OpenHandler.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/satellite/WebContent/WEB-INF/dispatcher-servlet.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/satellite/WebContent/WEB-INF/web.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/snj/WebContent/WEB-INF/jsp/viewModel.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/snj/WebContent/WEB-INF/jsp/main.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" path="/snj/WebContent/WEB-INF/jsp/viewModel.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/satellite/src/org/satellite/OpenHandler.java"/>
+</editors>
+<item historyLabel="earthTest.jsp" index="0">
+<position info="not_deleted" x="2136" y="0"/>
+</item>
+<item historyLabel="test.jsp" index="1">
+<position info="not_deleted" x="457" y="0"/>
+</item>
+<item historyLabel="earthTest.jsp" index="0">
+<position info="not_deleted" x="774" y="0"/>
+</item>
+<item historyLabel="ApiKeyProcessor.java" index="2">
+<position info="not_deleted" x="2851" y="0"/>
+</item>
+<item historyLabel="ApiKeyRepository.java" index="3">
+<position info="not_deleted" x="224" y="6"/>
+</item>
+<item historyLabel="ApiKeyProcessor.java" index="2">
+<position info="not_deleted" x="2574" y="0"/>
+</item>
+<item historyLabel="tFactory.sql" index="4">
+<position info="not_deleted" x="221" y="0"/>
+</item>
+<item historyLabel="ApiKeyHandler.java" index="5">
+<position info="not_deleted" x="1102" y="0"/>
+</item>
+<item historyLabel="web.xml" index="6"/>
+<item historyLabel="dispatcher-servlet.xml" index="7"/>
+<item historyLabel="requestApiKey.jsp" index="8">
+<position info="not_deleted" x="914" y="0"/>
+</item>
+<item historyLabel="OpenHandler.java" index="9">
+<position info="not_deleted" x="532" y="0"/>
+</item>
+<item historyLabel="SNJController.java" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="index.jsp" index="11">
+<position info="not_deleted" x="134" y="0"/>
+</item>
+<item historyLabel="index.jsp" index="11">
+<position info="not_deleted" x="134" y="0"/>
+</item>
+<item historyLabel="SNJController.java" index="10">
+<position info="not_deleted" x="304" y="0"/>
+</item>
+<item historyLabel="viewPosition.jsp" index="12">
+<position info="not_deleted" x="913" y="0"/>
+</item>
+<item historyLabel="TraceController.java" index="13">
+<position info="not_deleted" x="608" y="0"/>
+</item>
+<item historyLabel="TerminatorGeo.java" index="14">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="OpenHandler.java" index="15">
+<position info="not_deleted" x="753" y="0"/>
+</item>
+<item historyLabel="TerminatorGeo.java" index="14">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="TraceController.java" index="13">
+<position info="not_deleted" x="549" y="0"/>
+</item>
+<item historyLabel="dispatcher-servlet.xml" index="16"/>
+<item historyLabel="web.xml" index="17"/>
+<item historyLabel="dispatcher-servlet.xml" index="16"/>
+<item historyLabel="TraceController.java" index="13">
+<position info="not_deleted" x="610" y="0"/>
+</item>
+<item historyLabel="viewPosition.jsp" index="12">
+<position info="not_deleted" x="859" y="0"/>
+</item>
+<item historyLabel="viewModel.jsp" index="18">
+<position info="not_deleted" x="1327" y="0"/>
+</item>
+<item historyLabel="viewPosition.jsp" index="12">
+<position info="not_deleted" x="1198" y="0"/>
+</item>
+<item historyLabel="main.jsp" index="19">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="viewModel.jsp" index="20">
+<position info="not_deleted" x="1984" y="0"/>
+</item>
+<item historyLabel="viewPosition.jsp" index="12">
+<position info="not_deleted" x="863" y="0"/>
+</item>
+<item historyLabel="viewModel.jsp" index="20">
+<position info="not_deleted" x="2092" y="0"/>
+</item>
+<item historyLabel="viewPosition.jsp" index="12">
+<position info="not_deleted" x="765" y="0"/>
+</item>
+<item historyLabel="viewModel.jsp" index="20">
+<position info="not_deleted" x="2092" y="0"/>
+</item>
+<item historyLabel="OpenHandler.java" index="21">
+<position info="not_deleted" x="753" y="0"/>
+</item>
+<item active="true" historyLabel="viewPosition.jsp" index="12">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="viewPosition.jsp" tooltip="snj/WebContent/WEB-INF/jsp/viewPosition.jsp">
+<persistable path="/snj/WebContent/WEB-INF/jsp/viewPosition.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="main.jsp" tooltip="snj/WebContent/WEB-INF/jsp/main.jsp">
+<persistable path="/snj/WebContent/WEB-INF/jsp/main.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="viewModel.jsp" tooltip="snj/WebContent/WEB-INF/jsp/viewModel.jsp">
+<persistable path="/snj/WebContent/WEB-INF/jsp/viewModel.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="web.xml" tooltip="satellite/WebContent/WEB-INF/web.xml">
+<persistable path="/satellite/WebContent/WEB-INF/web.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="dispatcher-servlet.xml" tooltip="satellite/WebContent/WEB-INF/dispatcher-servlet.xml">
+<persistable path="/satellite/WebContent/WEB-INF/dispatcher-servlet.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OpenHandler.java" tooltip="satellite/src/org/satellite/OpenHandler.java">
+<persistable path="/satellite/src/org/satellite/OpenHandler.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TerminatorGeo.java" tooltip="satellite/src/org/satellite/TerminatorGeo.java">
+<persistable path="/satellite/src/org/satellite/TerminatorGeo.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TraceController.java" tooltip="satellite/src/org/satellite/TraceController.java">
+<persistable path="/satellite/src/org/satellite/TraceController.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="index.jsp" tooltip="snj/WebContent/index.jsp">
+<persistable path="/snj/WebContent/index.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SNJController.java" tooltip="snj/src/com/snj/SNJController.java">
+<persistable path="/snj/src/com/snj/SNJController.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OpenHandler.java" tooltip="tFactory/src/com/tfactory/web/OpenHandler.java">
+<persistable path="/tFactory/src/com/tfactory/web/OpenHandler.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="requestApiKey.jsp" tooltip="tFactory/WebContent/WEB-INF/jsp/requestApiKey.jsp">
+<persistable path="/tFactory/WebContent/WEB-INF/jsp/requestApiKey.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="dispatcher-servlet.xml" tooltip="tFactory/WebContent/WEB-INF/dispatcher-servlet.xml">
+<persistable path="/tFactory/WebContent/WEB-INF/dispatcher-servlet.xml"/>
+</file>
+</mruList>
+</workbench>

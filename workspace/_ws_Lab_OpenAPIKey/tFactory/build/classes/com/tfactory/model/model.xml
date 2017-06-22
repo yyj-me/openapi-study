@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+    
+<sqlMap namespace="model">
+  
+  <typeAlias alias="Model" type="com.tfactory.model.ModelVO"/>
+  
+  <insert id="create" parameterClass="Model">
+	insert into tbl_model (mcode, mname, mdesc, mimg ) 
+	values (#mcode#,#mname#,#mdesc#, #mimg#)
+  </insert>
+  
+  <delete id="delete" parameterClass="java.lang.String">
+    delete tbl_model where mcode = #id#
+  </delete>
+  
+  <update id="update" parameterClass="Model">
+    update tbl_model set mname=#mname#, mdesc=#mdesc#, mimg=#mimg# where mcode=#mcode#
+  </update>
+  
+  <select id="select" parameterClass="java.lang.String" resultClass="Model">
+    
+    select mcode, mname,mdesc, to_char(regdate,'yyyy-mm-dd') regdate, mimg from tbl_model where mcode = #id#
+  
+  </select>
+  
+    <select id="selectAll" resultClass="Model">
+    
+    select mcode, mname,mdesc,to_char(regdate,'yyyy-mm-dd') regdate, mimg from tbl_model order by regdate desc
+  
+  </select>
+  
+</sqlMap>    

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
+<script type="text/javascript">
+	var url = "http://70.12.107.190:8000/contactsvc/contacts";
+	$.get("/contactsvc/contacts/1", function(data) {
+		console.log(data);
+	});
+</head>
+<body>
+
+</body>
+</html>

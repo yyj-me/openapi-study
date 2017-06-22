@@ -1,0 +1,48 @@
+package com.multi.contacts.biz.dao;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.ibatis.support.SqlMapClientDaoSupport;
+import org.springframework.stereotype.Repository;
+
+import com.ibatis.sqlmap.client.SqlMapClient;
+import com.multi.contacts.biz.domain.Contact;
+
+@Repository
+public class ContactDAO extends SqlMapClientDaoSupport {
+	@Autowired
+	public void setSQLMapClientWrapper(SqlMapClient sqlMapClient) {
+		this.setSqlMapClient(sqlMapClient);		
+	}
+	
+	public List<Contact> getSelectAll() {
+		return (List<Contact>)this.getSqlMapClientTemplate().queryForList("contact.selectall");		
+	}
+	
+	public List<Contact> getSelectAll(int pageno, int pagesize) {
+		int skip = (pageno - 1) * pagesize;
+		int max = pagesize;
+		return (List<Contact>)this.getSqlMapClientTemplate().queryForList("contact.selectall", skip, max);
+	}
+	
+	public Contact getSelectOne(Contact contact) {
+		return (Contact)this.getSqlMapClientTemplate().queryForObject("contact.selectone", contact);
+	}
+	
+	public int getSelectCnt() {
+		return (Integer)this.getSqlMapClientTemplate().queryForObject("contact.selectcnt");
+	}
+	
+	public int insertContact(Contact contact) {
+		return (Integer)this.getSqlMapClientTemplate().insert("contact.insert", contact);
+	}
+	
+	public int updateContact(Contact contact) {
+		return this.getSqlMapClientTemplate().update("contact.update", contact);
+	}
+	
+	public int deleteContact(Contact contact) {
+		return this.getSqlMapClientTemplate().delete("contact.delete", contact);
+	}
+}

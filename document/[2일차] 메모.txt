@@ -1,0 +1,109 @@
+2일차
+
+*** URI 원칙
+- 명사형(단수, 복수)
+- 적절한 depth로 경로를 구성(3 ~ 4 단계 권장)
+- 특수문자 사용하지 않음 (ex) _ --> - 사용 (가독성)
+
+*** 기본적인 방법(URI 단위로..)
+1. /contacts
+  - GET : 전체 조회
+     parameter : pageno, pagesize (특정 페이지 조회)
+  - POST : 데이터 추가
+  - PUT : 오류
+  - DELETE : 오류
+
+2. /contacts/{no}
+  - GET : 특정 연락처 조회
+  - POST : 오류
+  - PUT : 수정
+  - DELETE : 삭제
+
+*** 기능 중심 방법
+1. 조회 : GET /contacts    
+2. 특정 한건 조회 : GET /contacts/{no}
+3. 추가 : POST /contacts
+4. 수정 : PUT /contacts/{no}
+5. 삭제 : DELETE /contacts/{no}
+
+
+*** GET, POST만 사용하도록 한다면? 동사를 사용할 수밖에 없음
+1. 조회 : GET /contacts    
+2. 특정 한건 조회 : GET /contacts/{no}
+3. 추가 : POST /contacts/add
+4. 수정 : PUT /contacts/update/{no}
+5. 삭제 : DELETE /contacts/delete/{no}
+
+## PUT, DELETE 는 CSRF 공격의 위험이 발생할 수 있음. form 형식 입력 막아야 함
+
+***동사를 사용해야만 하는 또 다른 상황
+데이터베이스에서 수행되는 작업이 POST, PUT, DELETE 만으로 구분하기 힘든 경우
+POST /accounts/{accno}/deposit
+POST /accounts/{accno}/withdraw
+GET /accounts/{accno}/balance
+
+
+### sample
+https://dev.twitter.com/rest/tools/console
+
+
+*** 버전관리 문제
+(v1.0 -> v2.0 일 경우)
+GET /v1/contacts
+GET /v2/contacts
+
+### Reference
+한빛 일관성 있는 웹 서비스 인터페이스 설계 ...
+
+
+
+### REST client 테스트 도구
+# 텍스트 기반
+- curl : 전통적, 오래된 도구
+- httpie : Python 기반
+
+# 브라우저 플러그인
+- POSTMAN REST Client
+- ARC(Advanced REST Client)
+
+
+### URI 설계
+1. GET /contacts
+: 특정 페이지, 전체 조회
+pageno, pagesize
+
+2. POST /contacts
+3. PUT /contacts/{no}
+4. DELETE .contacts/{no}
+5. GET /contacts/{no}
+
+### 요청데이터 형식
+1. form 형식 aa=1&bb=1&cc=2
+2. JSON, XML 형식
+
+
+### CSRF 공격대비
+1. form 형식 대신 @RequestBody를 이용하여 json, xml 형식으로 요청하도록 변경
+
+
+### enable PUT, DELETE method by tomcat (form 형식 전달할때)
+Tomcat web.xml에 추가
+
+<filter>
+  <filter-name>httpPutFormFilter</filter-name>
+  <filter-class>org.springframework.web.filter.HttpPutFormContentFilter</filter-class>
+</filter>
+
+<filter-mapping>
+  <filter-name>httpPutFormFilter</filter-name>
+  <servlet-name>dispatcher</servlet-name>
+</filter-mapping>
+
+<servlet>
+  <servlet-name>dispatcher</servlet-name>
+  <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+</servlet>
+
+
+http://finkle.tistory.com/94
+

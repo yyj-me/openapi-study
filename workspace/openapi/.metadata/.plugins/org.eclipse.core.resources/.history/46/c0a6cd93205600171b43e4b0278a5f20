@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
+<script type="text/javascript">
+	$.get("/contactsvc/contacts", {pageno:1}, function(data) {
+		console.log(data);
+	});
+	
+	var param = {};
+	param.name = "정영윤";
+	param.tel = "010-0000-0000";
+	param.email = "aaa@aaa.com";
+	
+	$.ajax({
+		url : "/contactsvc/contacts",
+		type : "POST",
+		contentType : "application/json",
+		data : JSON.stringfy,
+		success: function(res) {
+			console.log(res);
+		}
+	})
+
+</script>
+</head>
+<body>
+	TEST
+</body>
+</html>

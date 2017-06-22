@@ -1,0 +1,37 @@
+3일차
+
+### SOP : same origin policy 문제
+
+해결방법
+
+* Consumer 측
+1. Proxy Server 개발
+spring, tomcat, nodejs 등으로 구현..
+
+* Provider 측
+
+2.CDM cross document messaging
+iframe 사용
+
+3.*** JSONP json padding
+많이 사용
+get 방식만 가능..
+
+4.*** CORS
+
+
+
+4장
+용어
+API Key 식별만.. 인증하지 않음
+
+
+ID : API key, ID, appId
+pwd : ~Secret
+
+
+
+
+*** 예외처리
+중앙집중화 : SimpleMappingExceptionResolver 사용
+

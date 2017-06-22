@@ -1,0 +1,80 @@
+package com.multi.contacts.biz.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.multi.contacts.biz.dao.ContactDAO;
+import com.multi.contacts.biz.domain.Contact;
+import com.multi.contacts.biz.domain.ContactList;
+import com.multi.contacts.biz.domain.RESTResult;
+
+@Service
+public class ContactService {
+	@Autowired
+	private ContactDAO contactDAO;
+	
+	public ContactList getSelectAll() {
+		List<Contact> contacts = contactDAO.getSelectAll();
+		ContactList contactList = new ContactList(0, 0, contacts.size(), contacts);
+		return contactList;
+	}
+	
+	public ContactList getSelectAll(int pageno, int pagesize) {
+		List<Contact> contacts = contactDAO.getSelectAll(pageno, pagesize);
+		int totalCount = contactDAO.getSelectCnt();		
+		ContactList contactList = new ContactList(pageno, pagesize, totalCount, contacts);
+		return contactList;			
+	}
+	
+	public Contact getSelectOne(Contact contact) {
+		return contactDAO.getSelectOne(contact);				
+	}
+	
+	public RESTResult insertContact(Contact contact) {		
+		RESTResult result = new RESTResult("ok", "데이터 추가 성공", 0);
+		try {
+			int no = contactDAO.insertContact(contact);
+			result.setNo(no);			
+		} catch (Exception e) {
+			result.setStatus("fail");
+			result.setMessage("데이터 추가 실패 : " + e.getMessage());
+		}
+		return result;
+	}
+	
+	public RESTResult updateContact(Contact contact) {
+		RESTResult result = new RESTResult("ok", "데이터 수정 성공", contact.getNo());
+		try {
+			int count = contactDAO.updateContact(contact);
+			if(count == 0) {
+				result.setStatus("fail");
+				result.setMessage("데이터 수정 실패 : 존재하지 않는 데이터");
+				result.setNo(0);
+			}
+		} catch (Exception e) {
+			result.setStatus("fail");
+			result.setMessage("데이터 수정 실패 : " + e.getMessage());
+			result.setNo(0);
+		}
+		return result;
+	}
+	
+	public RESTResult deleteContact(Contact contact) {
+		RESTResult result = new RESTResult("ok", "데이터 삭제 성공", contact.getNo());
+		try {
+			int count = contactDAO.deleteContact(contact);
+			if(count == 0) {
+				result.setStatus("fail");
+				result.setMessage("데이터 삭제 실패 : 존재하지 않는 데이터");
+				result.setNo(0);
+			}
+		} catch (Exception e) {
+			result.setStatus("fail");
+			result.setMessage("데이터 삭제 실패 : " + e.getMessage());
+			result.setNo(0);
+		}
+		return result;
+	}
+}

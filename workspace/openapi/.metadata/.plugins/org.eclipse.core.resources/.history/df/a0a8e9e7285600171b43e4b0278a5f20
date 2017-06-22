@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
+<script type="text/javascript">
+// # 1
+// function test(data) {
+// 	console.log("### JSONP 호출 ###");
+// 	console.log(data);
+// }
+// $.getScript("http://sample.bmaster.kro.kr/contacts?callback=test&pageno=1");
+
+// # 2
+// $.ajax({
+// 	url:"http://sample.bmaster.kro.kr/contacts",
+// 	type:"GET",
+// 	data:{pageno:1},
+// 	dataType:"jsonp",
+// 	jsonp:"callback",
+// 	success:function(data) {
+// 		console.log(data);
+// 	}
+// })
+
+var url = "http://sample.bmaster.kro.kr/contacts?callback=?";
+</script>
+
+</head>
+<body>
+
+</body>
+</html>
