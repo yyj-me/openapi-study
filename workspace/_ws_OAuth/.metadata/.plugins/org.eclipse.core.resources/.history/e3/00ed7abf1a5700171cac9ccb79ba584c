@@ -1,0 +1,44 @@
+package com.sds.testprovider.controller;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+import org.thinker.oauth.parameter.RequestTokenParam;
+
+import com.sds.testprovider.model.ConsumerVO;
+import com.sds.testprovider.model.RequestTokenVO;
+import com.sds.testprovider.service.ConsumerService;
+import com.sds.testprovider.service.ConsumerServiceImpl;
+import com.sds.testprovider.service.RequestTokenService;
+import com.sds.testprovider.util.TokenGenerator;
+
+@Controller
+public class RequestTokenController {
+
+	@Autowired
+	private ConsumerService consumerService;
+
+	@Autowired
+	private RequestTokenService requestTokenService;
+	
+	@RequestMapping(value="request_token")
+	public ModelAndView requestToken(HttpServletRequest request) throws Exception {
+		
+		// 1. QueryString 또는 Post 파라미터 파싱
+		RequestTokenParam param = new RequestTokenParam(request);
+		
+		// 2. tbl_oauth_key 테이블에서 ConsumerSecret 정보 읽어옴
+		ConsumerVO consumerVO = consumerService.selectByConsumerKey(param.getConsumerKey());
+		String consumerSecret = consumerVO.getConsumerSecret();
+		
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("request_token");
+		
+		return null;
+	}
+}

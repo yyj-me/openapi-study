@@ -1,0 +1,11 @@
+package org.thinker.oauth;
+
+public class Setup {
+	public static final String CK = "1kaMBVZa1AEw27fcEYNLZZ2Xx";
+	public static final String CS = "FUYMxmaIlypHeEJ3l0qDWAQpLo5yGlwizRg7meRn8OgpFduFlu";
+	public static final String RT_URL = "https://api.twitter.com/oauth/request_token";
+	public static final String AUTH_URL = "https://api.twitter.com/oauth/authorize";
+	public static final String AT_URL = "https://api.twitter.com/oauth/access_token";
+	public static final String CALLBACK_URL = "http://jcornor.com:8000/twit/callback";
+	public static final String RES_URL = "https://api.twitter.com/1.1/statuses/home_timeline.json";
+}

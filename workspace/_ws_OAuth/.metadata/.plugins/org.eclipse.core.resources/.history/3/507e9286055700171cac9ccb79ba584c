@@ -1,0 +1,11 @@
+package org.thinker.oauth;
+
+public class Setup {
+	public static final String CK = "";
+	public static final String CS = "";
+	public static final String RT_URL = "";
+	public static final String AUTH_URL = "";
+	public static final String AT_URL = "";
+	public static final String CALLBACK_URL = "";
+	public static final String RES_URL = "";
+}

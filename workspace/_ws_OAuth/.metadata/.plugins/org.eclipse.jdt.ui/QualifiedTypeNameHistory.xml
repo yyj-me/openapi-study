@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.thinker.oauth.RequestTokenVO"/>
+<fullyQualifiedTypeName name="org.thinker.oauth.OAuthMsgConstants"/>
+<fullyQualifiedTypeName name="org.thinker.oauth.AccessTokenVO"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="org.thinker.oauth.ResourceTokenVO"/>
+<fullyQualifiedTypeName name="org.thinker.oauth.Setup"/>
+<fullyQualifiedTypeName name="org.thinker.oauth.TokenSender"/>
+<fullyQualifiedTypeName name="org.thinker.oauth.parameter.RequestTokenParam"/>
+<fullyQualifiedTypeName name="com.sds.testprovider.model.ConsumerVO"/>
+<fullyQualifiedTypeName name="com.sds.testprovider.service.ConsumerServiceImpl"/>
+<fullyQualifiedTypeName name="com.sds.testprovider.util.TokenGenerator"/>
+<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+<fullyQualifiedTypeName name="com.sds.testprovider.model.RequestTokenVO"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
+<fullyQualifiedTypeName name="com.sds.testprovider.util.SessionUtil"/>
+</qualifiedTypeNameHistroy>

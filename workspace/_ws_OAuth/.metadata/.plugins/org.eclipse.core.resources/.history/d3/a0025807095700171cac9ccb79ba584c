@@ -1,0 +1,38 @@
+package org.thinker.oauth.controller;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.thinker.oauth.AccessTokenVO;
+import org.thinker.oauth.OAuthUtil;
+import org.thinker.oauth.RequestTokenVO;
+import org.thinker.oauth.ResourceTokenVO;
+import org.thinker.oauth.TokenSender;
+
+/**
+ * Servlet implementation class TwitterCallBackServlet
+ */
+public class TwitterCallBackServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public TwitterCallBackServlet() {
+        super();
+    }
+
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String qs = request.getQueryString();
+		AccessTokenVO vo = new AccessTokenVO(qs);
+		
+		
+		
+	}
+
+
+}

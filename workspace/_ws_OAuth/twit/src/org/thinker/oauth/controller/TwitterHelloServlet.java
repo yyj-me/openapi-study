@@ -1,0 +1,59 @@
+package org.thinker.oauth.controller;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.thinker.oauth.ResourceTokenVO;
+import org.thinker.oauth.Setup;
+import org.thinker.oauth.TokenSender;
+
+/**
+ * Servlet implementation class TwitterHelloServlet
+ */
+public class TwitterHelloServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public TwitterHelloServlet() {
+        super();
+    }
+
+	/**
+	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// 3번 단계
+		
+		HttpSession session = request.getSession();
+		String AT = (String)session.getAttribute("T");
+		String ATS = (String)session.getAttribute("TS");
+		System.out.println("###AT : " + AT);
+		System.out.println("###ATS : " + ATS);
+		
+		ResourceTokenVO vo = new ResourceTokenVO();
+		vo.setMethod("GET");
+		vo.setRequestURL(Setup.RES_URL);
+		vo.setConsumerKey(Setup.CK);
+		vo.setConsumerSecretKey(Setup.CS);
+		vo.setRequestOauthToken(AT);
+		vo.setRequestOauthTokenSecret(ATS);
+		vo.sign();
+		
+		TokenSender sender = new TokenSender();
+		try {
+			sender.sendHttpClient(vo);
+			String json = vo.getResult();
+			response.setContentType("application/json");
+			response.getWriter().print(json);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

@@ -1,0 +1,21 @@
+content_assist_disabled_computers=org.eclipse.jdt.ui.javaAllProposalCategory\u0000org.eclipse.jdt.ui.javaNoTypeProposalCategory\u0000org.eclipse.jdt.ui.textProposalCategory\u0000org.eclipse.jdt.ui.javaTypeProposalCategory\u0000
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="org.thinker.oauth.TokenSender"><rhs name\="org.thinker.oauth.TokenSender"/></lhs><lhs name\="org.thinker.oauth.RequestTokenVO"><rhs name\="org.thinker.oauth.AccessTokenVO"/><rhs name\="org.thinker.oauth.ResourceTokenVO"/></lhs><lhs name\="org.thinker.oauth.ISign"><rhs name\="org.thinker.oauth.AccessTokenVO"/><rhs name\="org.thinker.oauth.ResourceTokenVO"/></lhs><lhs name\="org.thinker.oauth.BasicTokenVO"><rhs name\="org.thinker.oauth.AccessTokenVO"/><rhs name\="org.thinker.oauth.ResourceTokenVO"/></lhs><lhs name\="org.thinker.oauth.AccessTokenVO"><rhs name\="org.thinker.oauth.AccessTokenVO"/><rhs name\="org.thinker.oauth.ResourceTokenVO"/></lhs><lhs name\="org.thinker.oauth.ResourceTokenVO"><rhs name\="org.thinker.oauth.ResourceTokenVO"/></lhs><lhs name\="org.thinker.oauth.parameter.RequestTokenParam"><rhs name\="org.thinker.oauth.parameter.RequestTokenParam"/></lhs><lhs name\="org.springframework.web.servlet.ModelAndView"><rhs name\="org.springframework.web.servlet.ModelAndView"/></lhs><lhs name\="com.sds.testprovider.model.RequestTokenVO"><rhs name\="com.sds.testprovider.model.RequestTokenVO"/></lhs><lhs name\="java.lang.CharSequence"><rhs name\="java.lang.StringBuilder"/></lhs><lhs name\="java.lang.AbstractStringBuilder"><rhs name\="java.lang.StringBuilder"/></lhs><lhs name\="java.lang.Appendable"><rhs name\="java.lang.StringBuilder"/></lhs></history>
+content_assist_number_of_computers=21
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+fontPropagated=true
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.ui.editor.tab.width=
+org.eclipse.jdt.ui.formatterprofiles.version=12
+org.eclipse.jdt.ui.javadoclocations.migrated=true
+org.eclipse.jdt.ui.text.code_templates_migrated=true
+org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.templates_migrated=true
+org.eclipse.jface.textfont=1|Consolas|11.25|0|WINDOWS|1|-15|0|0|0|400|0|0|0|0|3|2|1|49|Consolas;
+proposalOrderMigrated=true
+spelling_locale_initialized=true
+tabWidthPropagated=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

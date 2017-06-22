@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+    
+<sqlMap namespace="Consumer">
+
+  <typeAlias alias="ConsumerVO" type="com.sds.testprovider.model.ConsumerVO"/>
+  
+  <insert id="create" parameterClass="ConsumerVO">
+	insert into tbl_consumer (consumerkey, consumerSecret, userid, callbackurl, appname) 
+	values (#consumerKey#, #consumerSecret#, #userId#, #callbackUrl#, #appName#)
+  </insert>
+  
+  <delete id="delete" parameterClass="java.lang.String">
+    delete tbl_consumer where consumerkey = #consumerKey#
+  </delete>
+  
+  <select id="selectByConsumerKey" parameterClass="java.lang.String" resultClass="ConsumerVO">
+    select consumerkey, consumerSecret, userid,  
+            to_char(regdate,'yyyy-mm-dd') AS regdate, 
+            callbackUrl, appName 
+    from tbl_consumer 
+    where consumerkey = #consumerKey#
+  </select>
+  
+  <select id="selectByUserID" parameterClass="java.lang.String" resultClass="ConsumerVO">
+    select consumerkey, consumerSecret, userid, 
+            to_char(regdate,'yyyy-mm-dd HH24:MI:SS') AS regdate, 
+            callbackUrl, appName 
+    from tbl_consumer 
+    where userid = #userId#
+  </select>
+  
+</sqlMap>    

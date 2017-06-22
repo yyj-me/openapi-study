@@ -1,0 +1,58 @@
+package com.sds.testprovider.controller;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.sds.testprovider.model.RequestTokenVO;
+import com.sds.testprovider.service.RequestTokenService;
+import com.sds.testprovider.service.UsersService;
+
+@Controller
+@RequestMapping(value="/authorize") 
+public class AuthorizeController {
+	
+	@Autowired
+	private RequestTokenService requestTokenService;
+	
+	@Autowired
+	private UsersService usersService;
+	
+	@RequestMapping(method=RequestMethod.GET)
+	public ModelAndView authorizeGet(HttpServletRequest request) throws Exception {
+		ModelAndView mav = new ModelAndView();
+		String oauth_token = (String)request.getParameter("oauth_token");
+		// 1. oauth_token 값으로 tbl_request_token 조회하여 레코드가 존재하지 않으면 오류
+		RequestTokenVO requestTokenVO = requestTokenService.getRequestToken(oauth_token);
+		if(requestTokenVO != null) {
+			mav.setViewName("authorize");
+			mav.addObject("requestTokenVO", requestTokenVO);
+		} else {
+			mav.setViewName("authorize_error");
+			mav.addObject("errorMessage", "invalid oauth_token!");
+		}
+		return mav;
+	}
+	
+	@RequestMapping(method=RequestMethod.POST)
+	public ModelAndView authorizePost(HttpSession session, HttpServletRequest request, HttpServletResponse response) throws Exception {
+		// 1. QueryString 값 파싱
+		String allow_deny = request.getParameter("allow_deny");
+		String oauth_token = request.getParameter("oauth_token");
+		String userid = request.getParameter("userid");
+		String password = request.getParameter("password");
+		
+		// 2. 임시 생성된 RequestToken 값 읽어오기(from tbl_request_token)
+		
+		return null;		
+	}
+	
+	
+	
+}

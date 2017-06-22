@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+    
+<sqlMap namespace="users">
+  
+  <typeAlias alias="UsersVO" type="com.sds.testprovider.model.UsersVO"/>
+  
+  <insert id="createUser" parameterClass="UsersVO">
+	insert into tbl_users (userno, userid, password, username) 
+	values (#userno#, #userid#, #password#, #username#)
+  </insert>
+  
+  <select id="selectUserByUserID" parameterClass="UsersVO" resultClass="UsersVO">
+    select userno, userid, password, username 
+    from tbl_users where userid = #userid# and password=#password# 
+  </select>
+
+  <select id="selectUserByUserNo" parameterClass="java.lang.Long" resultClass="UsersVO">
+    select userno, userid, password, username 
+    from tbl_users where userno = #userno# 
+  </select>
+  
+  <select id="getNextNo" resultClass="java.lang.Integer">
+  	select max(userno) + 1 AS nextNum FROM tbl_users
+  </select>
+  
+</sqlMap>    
