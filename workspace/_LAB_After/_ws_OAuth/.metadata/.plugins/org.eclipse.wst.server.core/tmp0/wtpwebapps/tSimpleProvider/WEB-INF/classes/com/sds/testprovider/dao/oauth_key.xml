@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+    
+<sqlMap namespace="oAuthKey">
+
+  <typeAlias alias="OAuthKeyVO" type="com.sds.testprovider.model.OAuthKeyVO"/>
+  
+  <insert id="create" parameterClass="OAuthKeyVO">
+	insert into tbl_oauth_key (consumerkey, consumerSecret, userid, oauthtoken, oauthtokensecret, callbackurl, appname) 
+	values (#consumerKey#, #consumerSecret#, #userId#, #oauthToken#, #oauthTokenSecret#, #callbackUrl#, #appName#)
+  </insert>
+  
+  <delete id="delete" parameterClass="java.lang.String">
+    delete tbl_oauth_key where consumerkey = #consumerKey#
+  </delete>
+  
+  <select id="selectByConsumerKey" parameterClass="java.lang.String" resultClass="OAuthKeyVO">
+    select consumerkey, consumerSecret, userid, oauthToken, oAuthTokenSecret, 
+            to_char(regdate,'yyyy-mm-dd') AS regdate, 
+            callbackUrl, appName 
+    from tbl_oauth_key 
+    where consumerkey = #consumerKey#
+  </select>
+  
+  <select id="selectByUserID" parameterClass="java.lang.String" resultClass="OAuthKeyVO">
+    select consumerkey, consumerSecret, userid, oauthToken, oAuthTokenSecret, 
+            to_char(regdate,'yyyy-mm-dd HH24:MI:SS') AS regdate, 
+            callbackUrl, appName 
+    from tbl_oauth_key 
+    where userid = #userId#
+  </select>
+  
+</sqlMap>    

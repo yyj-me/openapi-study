@@ -124,7 +124,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log." suffix=".txt"/>
 
-      <Context docBase="C:\dev\workspace\_ws_OAuth\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\dev\workspace\_ws_OAuth\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\twit" path="/twit" reloadable="true" source="org.eclipse.jst.jee.server:twit"/><Context docBase="C:\dev\workspace\_ws_OAuth\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\tSimpleProvider" path="/tSimpleProvider" reloadable="true" source="org.eclipse.jst.jee.server:tSimpleProvider"/></Host>
+      <Context docBase="C:\dev\workspace\_ws_OAuth\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\dev\workspace\_ws_OAuth\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\tSimpleProvider" path="/tSimpleProvider" reloadable="true" source="org.eclipse.jst.jee.server:tSimpleProvider"/><Context docBase="C:\dev\workspace\_ws_OAuth\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\twit" path="/twit" reloadable="true" source="org.eclipse.jst.jee.server:twit"/></Host>
     </Engine>
   </Service>
 </Server>

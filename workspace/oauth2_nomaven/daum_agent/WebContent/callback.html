@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>111</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript" src="js/oauth2util.js"></script>
+<script type="text/javascript">
+$(function() {
+	var queryStr = location.href.split("#")[1];
+	//생성한 토큰은 webapp일 경우는 SessionStorage와 같은 곳에 저장한다.
+	//Mobile은 안전한 저장소에 저장한다.
+	var token = getObjectFromParam(queryStr);
+	console.log(token);
+	
+	var resourceUrl = "https://apis.daum.net/user/v1/show.json?callback=?";
+	$.getJSON(resourceUrl, { access_token : token.access_token }, function(data) {
+		console.log(data);
+	});
+	
+});
+
+
+</script>
+
+</head>
+<body>
+<h2>다음의 리소스 서버로 요청합니다.</h2>
+http://localhost:8000/oauth2provider/resource/myinfo.do
+ <br>
+ <br>
+ console log를 열어서 수신한 데이터를 확인합니다. 
+</body>
+</html>

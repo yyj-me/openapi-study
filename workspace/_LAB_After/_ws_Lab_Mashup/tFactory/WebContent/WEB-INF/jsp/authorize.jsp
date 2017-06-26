@@ -1,0 +1,53 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+    
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<meta name="description" content="description"/>
+<meta name="keywords" content="keywords"/> 
+<meta name="author" content="author"/> 
+<link rel="stylesheet" type="text/css" href="../default.css"/>
+<title>Blackbox</title>
+</head>
+<body>
+<div class="main">
+	<div class="gfx"><h1>Terminator Factory</h1></div>
+	<jsp:include page="include/menu.jsp" />
+	
+	<div class="content">
+		<div class="item">
+		
+		
+			<h1>Authroize Page</h1>
+
+		</div>
+		<div class="item">
+			<h1>Sagittis libero</h1>
+			<p>Aliquam risus justo, mollis in, laoreet a, consectetuer nec, risus. Nunc blandit sodales lacus. Nam luctus semper mi. In eu diam. Phasellus rutrum elit vel nisi. Cras mauris nulla, egestas quis, cursus at, venenatis ac, ante. Fusce accumsan enim et arcu. Duis sagittis libero at lacus. Suspendisse lacinia nulla eget urna.</p>
+			<form method="post" action="authorize">
+			  <input type="hidden" name="oauth_token" value="<%=request.getParameter("oauth_token")%>"></input>
+			  TERMINATOR ID<input type="text" name="userid"></input>
+			  
+			  <input type="submit"></input>
+			</form>
+			<p>In hac habitasse platea dictumst. Duis porttitor. Sed vulputate elementum nisl. Vivamus et mi at arcu mattis iaculis. Nullam posuere tristique tortor. In bibendum. Aenean ornare, nunc eget pretium porttitor, sem est pretium leo, non euismod nulla dui non diam. Pellentesque dictum faucibus leo. Vestibulum ac ante. Sed in est. Sed sodales nisl sit amet augue. Donec ultrices, augue ullamcorper posuere laoreet, turpis massa tristique justo, sed egestas metus magna sed purus. Fusce eleifend, dui ut posuere auctor, justo elit posuere sapien, at blandit enim quam fringilla mi.</p>
+		</div>
+		<div class="item">
+			<h1>Leo tempor</h1>
+			<p>Praesent nisi sem, bibendum in, ultrices sit amet, euismod sit amet, dui. Donec varius tincidunt nisi. Ut ut sapien. Integer porta. Fusce nibh. Curabitur pellentesque, lectus at volutpat interdum, sem justo placerat elit, eget feugiat est leo tempor quam. Ut quis neque convallis magna consequat molestie. Nullam semper massa eget ligula. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque a nibh quis nunc volutpat aliquam</p>
+			<code>margin-bottom: 12px;
+font: normal 1.1em "Lucida Sans Unicode",serif;
+background: url(img/quote.gif) no-repeat;
+padding-left: 28px;
+color: #555;</code>
+			<p>Eget feugiat est leo tempor quam. Ut quis neque convallis magna consequat molestie.</p>
+		</div>
+	</div>
+	<div class="footer">&copy; 2006 <a href="index.html">Sitename.com</a>. Design by <a href="http://arcsin.se">Arcsin</a></div>
+</div>
+</body>
+</html>

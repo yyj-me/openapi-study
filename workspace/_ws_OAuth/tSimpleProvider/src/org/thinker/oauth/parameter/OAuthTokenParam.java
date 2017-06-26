@@ -49,7 +49,7 @@ public class OAuthTokenParam {
 		
 		makeBaseString();
 		
-		String oAuthTokenSecret = TokenGenerator.getAccessTokenSecret(password, this.oauthToken);
+		String oAuthTokenSecret = TokenGenerator.getAccessTokenSecret(password, consumerSecret);
 		
 		HmacSHA1 sha1 = new HmacSHA1();
 		sha1.setConsumerSecret(consumerSecret);

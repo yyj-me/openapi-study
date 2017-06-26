@@ -1,0 +1,17 @@
+INDEX VERSION 1.126
+C:\_LAB_Before\_ws_OpenAPIs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\791345978.index
+\twit
+C:\dev\workspace\openapi\_ws_OpenAPIs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3070531751.index
+\OpenAPIs_Test\src
+C:\dev\workspace\openapi\_ws_OpenAPIs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3096401965.index
+\facebookClient\src
+C:\_ws_OpenAPIs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3070531751.index
+\OpenAPIs_Test
+C:\_ws_OpenAPIs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\791345978.index
+\twit
+C:\_ws_OpenAPIs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3096401965.index
+\facebookClient
+C:\_ws_OpenAPIs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\993978040.index
+\ScriptTest
+C:\dev\workspace\openapi\_ws_OpenAPIs\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\791345978.index
+\twit\src

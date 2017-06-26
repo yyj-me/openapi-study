@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript">
+
+$(function() {
+	var authparam = {
+		client_id : "a45bfa41229a928e25ba5cae7dfc56cbf040f8e4",
+		redirect_uri : "http://jcornor.com:8000/bitlytest/accesstoken.html"
+	};
+	var authurl = "https://bitly.com/oauth/authorize";
+	
+	$("#goauth").click(function() {
+		var fullUrl = authurl + "?" + $.param(authparam);
+		//console.log(fullUrl);
+		location.href=fullUrl;
+	});
+});
+</script>
+</head>
+<body>
+http://localhost:8000/bitlytest<br>
+test app
+Client ID: d94f3bc27d7a8a03236f8f1a6ed2274b9ae00075<br>
+Client Secret: a198299407c9dd6228a9c663c6e23c8e10a36cc3<br>
+Generic Access Token : 2af3e362b31b7f09d9bcff79751075d48d05ca99<br>
+<button id="goauth">Authorize!</button>
+</body>
+</html>

@@ -1,0 +1,12 @@
+127.0.0.1 - - [12/Sep/2014:14:40:14 +0900] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [12/Sep/2014:14:40:15 +0900] "GET /SpringMVCService/ HTTP/1.1" 404 985
+0:0:0:0:0:0:0:1 - - [12/Sep/2014:14:40:25 +0900] "GET /SpringMVCService/ HTTP/1.1" 404 985
+0:0:0:0:0:0:0:1 - - [12/Sep/2014:14:40:34 +0900] "GET /SpringMVCService/service/countries.json HTTP/1.1" 404 1029
+0:0:0:0:0:0:0:1 - - [12/Sep/2014:14:40:39 +0900] "GET /SpringMVCService/service/countries HTTP/1.1" 404 1019
+0:0:0:0:0:0:0:1 - - [12/Sep/2014:14:41:07 +0900] "GET /SpringMVCService/service/countries.json HTTP/1.1" 404 1029
+127.0.0.1 - - [12/Sep/2014:14:41:22 +0900] "GET / HTTP/1.1" 404 951
+127.0.0.1 - - [12/Sep/2014:14:41:52 +0900] "GET / HTTP/1.1" 404 951
+127.0.0.1 - - [12/Sep/2014:14:42:43 +0900] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [12/Sep/2014:14:42:43 +0900] "GET /SpringMVCService/ HTTP/1.1" 404 985
+0:0:0:0:0:0:0:1 - - [12/Sep/2014:14:42:52 +0900] "GET /SpringMVCService/service/countries.jsaon HTTP/1.1" 404 949
+0:0:0:0:0:0:0:1 - - [12/Sep/2014:14:42:56 +0900] "GET /SpringMVCService/service/countries.json HTTP/1.1" 200 1871

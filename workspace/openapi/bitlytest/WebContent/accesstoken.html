@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript">
+//?code=a92bd56f7d25d4785a9a0451c840520b62ae2480
+
+function getParam(str) {
+	var obj = {};
+	var params = str.split("&");
+	for (var i=0; i < params.length; i++) {
+		var temp = params[i].split("=");
+		obj[temp[0]] = decodeURIComponent(temp[1]);
+	}
+	return obj;
+}
+		
+$(function() {
+	var accesstokenUrl = "https://api-ssl.bitly.com/oauth/access_token";
+	var accesstokenParam = {
+		client_id : "a45bfa41229a928e25ba5cae7dfc56cbf040f8e4",
+		client_secret : "e23f847536436190f3b82b7744beded77136d025",
+		code : "",
+		redirect_uri : "http://jcornor.com:8000/bitlytest/accesstoken.html"
+	};
+
+	var resourceUrl = "https://api-ssl.bitly.com/v3/shorten";
+	var resourceTokenParam = {
+		longUrl : "",
+		access_token : ""
+	};
+	//URL 에서 Verification Code 획득
+	accesstokenParam.code = location.search.substring(1).split("=")[1];
+	
+	$("#getaccesstoken").click(function() {
+		//location.href=accesstokenUrl + "?" + $.param(accesstokenParam);
+		
+		$.post(accesstokenUrl, accesstokenParam, function(data) {
+			console.log(data);
+			var param = getParam(data);
+			resourceTokenParam.access_token = param.access_token;			
+		});
+	});
+	
+	//https://api-ssl.bitly.com/v3/shorten?access_token=1a5bbcd3449ec2146575cca8778910e71c483b4b&longUrl=
+	$("#shorten").click(function() {
+		resourceTokenParam.longUrl = $("#longUrl").val();
+		$.get(resourceUrl, resourceTokenParam, function(json) {
+			console.log(json);
+			if (json.status_code == 200) {
+				$("#long").html(json.data.long_url);
+				$("#short").html(json.data.url);
+			} else {
+				alert(json.status_code + " : " + json.status_txt );
+			}
+		});
+	});
+});
+</script>
+</head>
+<body>
+http://localhost:8000/bitlytest<br>
+test app
+Client ID: d94f3bc27d7a8a03236f8f1a6ed2274b9ae00075<br>
+Client Secret: a198299407c9dd6228a9c663c6e23c8e10a36cc3<br>
+Generic Access Token : 2af3e362b31b7f09d9bcff79751075d48d05ca99<br>
+<button id="getaccesstoken">Get Access Token!</button>
+<br>
+<input type="text" id="longUrl" value="" />
+<button id="shorten">shorten URL</button>
+<div>
+	long url : <span id="long"></span><br>
+	shortend : <span id="short"></span>
+</div>
+</body>
+</html>

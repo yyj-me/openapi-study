@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Fri Sep 12 13:39:01 KST 2014
+org.eclipse.jst.jee.server\:/binary\:C\:\\dev\\workspace\\openapi\\_ws_Lab_1_2\\tFactory\\WebContent\\WEB-INF\\lib\\spring-web-3.2.7.RELEASE.jar=WEB-INF/lib/spring-web-3.2.7.RELEASE.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\dev\\workspace\\openapi\\_ws_Lab_1_2\\snj\\WebContent\\WEB-INF\\lib\\spring-web-3.2.7.RELEASE.jar=WEB-INF/lib/spring-web-3.2.7.RELEASE.jar

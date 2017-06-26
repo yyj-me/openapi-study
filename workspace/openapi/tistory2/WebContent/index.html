@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript">
+$(function() {
+	var param = {
+		client_id : "dc3069fbdb17ec8433ef1707f67db977",
+		redirect_uri : "http://localhost:8000/tistory2/callback.html",
+		response_type : "token"
+	};
+	var authorizeUrl = "https://www.tistory.com/oauth/authorize";
+	
+	$("#authorize").click(function() {
+		location.href=authorizeUrl + "?" + $.param(param);		
+	});
+});
+</script>
+</head>
+<body>
+서비스 URL	http://localhost:8000/tistory2<br>
+서비스 형태	PC어플리케이션<br>
+서비스 권한	읽기/쓰기<br>
+CallBack 경로	http://localhost:8000/tistory2/callback.html<br>
+Client ID	dc3069fbdb17ec8433ef1707f67db977<br>
+Secret Key	29f17f1f1da1a6b37faa1c937794179615002d0ef2c44e51c224b1be3cd692f4a054f50f<br>
+Authorize URL : https://www.tistory.com/oauth/authorize<br>
+Access Token URL : https://www.tistory.com/oauth/access_token<br><br>
+
+<button id="authorize">Authorize!!</button>
+</body>
+</html>

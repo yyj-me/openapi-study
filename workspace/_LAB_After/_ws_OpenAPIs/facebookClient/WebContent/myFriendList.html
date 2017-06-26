@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>  
+<script type='text/javascript'>
+function test(json) {
+	var list = $("#divFriendList");
+	for(var i=0; i < json.length; i++) {
+		var div = $("<div />").attr("style", "border:solid 1px blue; width:300px;");
+		div.append("UID : " + json[i].uid + "<br />Name : " + json[i].name);
+		list.append(div);
+	}
+}
+</script>
+<body>
+	<h1>친구 목록</h1>
+	<hr /><hr />
+	<div id="divFriendList" style="border:double 3px black; width:303px"></div>
+</body>
+</html>
+<script type="text/javascript" src="https://api.facebook.com/method/fql.query?access_token=215388178499545|c16dc9bc6246b706927f9a51.0-100000499536669|SJHPCreSL2qJ0dxy34xASSsrM4o&query=SELECT%20uid,%20name%20FROM%20user%20WHERE%20uid%20IN%20(SELECT%20uid1%20FROM%20friend%20WHERE%20uid2=me())&format=json&callback=test"></script>

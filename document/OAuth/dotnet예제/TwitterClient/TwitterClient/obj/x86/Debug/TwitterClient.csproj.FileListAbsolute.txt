@@ -1,0 +1,12 @@
+c:\users\administrator\documents\visual studio 2010\Projects\TwitterClient\TwitterClient\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\administrator\documents\visual studio 2010\Projects\TwitterClient\TwitterClient\obj\x86\Debug\TwitterClient.Form1.resources
+c:\users\administrator\documents\visual studio 2010\Projects\TwitterClient\TwitterClient\obj\x86\Debug\TwitterClient.Properties.Resources.resources
+c:\users\administrator\documents\visual studio 2010\Projects\TwitterClient\TwitterClient\obj\x86\Debug\ResGen.read.1.tlog
+c:\users\administrator\documents\visual studio 2010\Projects\TwitterClient\TwitterClient\obj\x86\Debug\ResGen.write.1.tlog
+c:\users\administrator\documents\visual studio 2010\Projects\TwitterClient\TwitterClient\bin\Debug\TwitterClient.exe
+c:\users\administrator\documents\visual studio 2010\Projects\TwitterClient\TwitterClient\bin\Debug\TwitterClient.pdb
+c:\users\administrator\documents\visual studio 2010\Projects\TwitterClient\TwitterClient\obj\x86\Debug\TwitterClient.exe
+c:\users\administrator\documents\visual studio 2010\Projects\TwitterClient\TwitterClient\obj\x86\Debug\TwitterClient.pdb
+c:\users\administrator\documents\visual studio 2010\Projects\TwitterClient\TwitterClient\bin\Debug\JsonExSerializer.dll
+c:\users\administrator\documents\visual studio 2010\Projects\TwitterClient\TwitterClient\bin\Debug\JsonExSerializer.pdb
+c:\users\administrator\documents\visual studio 2010\Projects\TwitterClient\TwitterClient\bin\Debug\JsonExSerializer.xml

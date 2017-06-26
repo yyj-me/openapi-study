@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>111</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript">
+$(function() {
+	function getObjectFromParam(str) {
+		var obj = {};
+		var params = str.split("&");
+		for (var i in params) {
+			var temp = params[i].split("=");
+			obj[temp[0]] = decodeURIComponent(temp[1]);
+		}
+		return obj;
+	}
+	
+	
+	var queryStr = location.href.split("#")[1];
+	var token = getObjectFromParam(queryStr);
+	token.output="json";
+	
+	document.domain = "tistory.com";	
+	var resourceUrl = "https://www.tistory.com/apis/blog/info";
+	$.get(resourceUrl, token, function(json) {
+		console.log(json);	
+	});	
+});
+
+
+</script>
+
+</head>
+<body>
+ 받아낸 access_token을 이용해 다음과 같이 실행해보세요
+ <br>
+ <br>
+ https://www.tistory.com/apis/blog/info?access_token=XXXX&output=json
+</body>
+</html>

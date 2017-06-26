@@ -1,0 +1,13 @@
+INDEX VERSION 1.126
+C:\_ws_OAuth\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4169066890.index
+\tSimpleProvider
+C:\dev\workspace\openapi\_ws_OAuth\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\791345978.index
+\twit\src
+C:\_ws_OAuth\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\617993235.index
+\tSimpleProvider
+C:\_ws_OAuth\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\791345978.index
+\twit
+C:\dev\workspace\openapi\_ws_OAuth\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4169066890.index
+\tSimpleProvider\src
+C:\dev\workspace\openapi\_ws_OAuth\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\617993235.index
+\tSimpleProvider\src

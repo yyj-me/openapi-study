@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title> Get Resource</title>
+	<script type="text/javascript" src="js/sha1.js"></script>
+	<script type="text/javascript" src="js/oauth.js"></script>
+	<script type="text/javascript" >
+		
+		function getResource() {
+			
+			var message = {
+				action: "https://api.twitter.com/1.1/statuses/home_timeline.json",
+				method: "GET",
+				parameters: {
+					oauth_consumer_key: "qwXidQXejg9XKKxKbbIpw",
+					oauth_signature_method: "HMAC-SHA1",
+					oauth_token: document.getElementById("request-token").value
+				}
+			};
+
+			OAuth.setTimestampAndNonce(message);
+			OAuth.SignatureMethod.sign(message, {
+				consumerSecret: "4rkSyaT89ip5DIJDz9neWBKdU3UXo4FXaaCnNDfhmw",
+				tokenSecret : document.getElementById("request-secret").value
+				});
+			
+			var params = [];
+
+			for(var name in message.parameters) {
+				params.push(name + "=" + 
+				encodeURIComponent(message.parameters[name]));
+			}
+
+			var url = message.action + "?" + params.join("&");
+
+			window.location = url;
+		}
+
+
+	</script>		
+
+</head>
+<body>
+	request-token : <input type="text" id="request-token" /><br>
+	request-secret : <input type="text" id="request-secret" /><br>
+	<button onclick="getResource()"> Get Resource </button>
+</body>
+</html>

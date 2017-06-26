@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+    
+<sqlMap namespace="oauth">
+  
+  <typeAlias alias="OAuthTokenVO" type="com.tfactory.oauth.OAuthTokenVO"/>
+  
+  <insert id="create" parameterClass="OAuthTokenVO">
+	insert into tbl_oauth (consumerKey, consumerSecretKey, requestToken, requestTokenSecret, accessToken, accessTokenSecret, verifier ) 
+	values (#consumerKey#, #consumerSecretKey#, #requestToken#, #requestTokenSecret#, #accessToken#, #accessTokenSecret#, #verifier#)
+  </insert>
+  <select id="select" resultClass="OAuthTokenVO" parameterClass="java.lang.String">
+    
+    select consumerKey, consumerSecretKey, requestToken, requestTokenSecret, accessToken, accessTokenSecret, verifier
+    from tbl_oauth where consumerKey = #key#
+    
+  </select>  
+  
+  <select id="select2" resultClass="OAuthTokenVO" parameterClass="java.lang.String">
+    
+    select consumerKey, consumerSecretKey, requestToken, requestTokenSecret, accessToken, accessTokenSecret, verifier
+    from tbl_oauth where requestToken = #key#
+    
+  </select>  
+  
+
+  
+</sqlMap>    

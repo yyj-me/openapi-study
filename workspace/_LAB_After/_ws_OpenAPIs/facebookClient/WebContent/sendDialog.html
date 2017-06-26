@@ -1,0 +1,17 @@
+<html xmlns:fb="http://www.facebook.com/2008/fbml">
+  <body>
+    <script src="http://connect.facebook.net/ko_KR/all.js"></script>
+    <div id="fb-root"></div>
+    <script>
+      // assume we are already logged in
+      FB.init({appId: '215388178499545', xfbml: true, cookie: true});
+
+      FB.ui({
+          method: 'send',
+          name: 'New Name',
+          link: 'http://news.nate.com/view/20110729n02331'
+          });
+     </script>
+  </body>
+</html>
+

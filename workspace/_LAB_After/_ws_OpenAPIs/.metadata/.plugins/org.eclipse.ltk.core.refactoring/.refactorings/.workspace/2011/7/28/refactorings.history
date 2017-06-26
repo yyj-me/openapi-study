@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ScriptTest&apos; to &apos;OpenAPIs_Test&apos;" description="Rename resource &apos;ScriptTest&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/ScriptTest" name="OpenAPIs_Test" stamp="1310195838821" updateReferences="true"/>
+</session>

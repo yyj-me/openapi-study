@@ -1,11 +1,21 @@
 package org.thinker.oauth;
 
 public class Setup {
-	public static final String CK = "1kaMBVZa1AEw27fcEYNLZZ2Xx";
-	public static final String CS = "FUYMxmaIlypHeEJ3l0qDWAQpLo5yGlwizRg7meRn8OgpFduFlu";
-	public static final String RT_URL = "https://api.twitter.com/oauth/request_token";
-	public static final String AUTH_URL = "https://api.twitter.com/oauth/authorize";
-	public static final String AT_URL = "https://api.twitter.com/oauth/access_token";
+	// for twitter
+//	public static final String CK = "1kaMBVZa1AEw27fcEYNLZZ2Xx";
+//	public static final String CS = "FUYMxmaIlypHeEJ3l0qDWAQpLo5yGlwizRg7meRn8OgpFduFlu";
+//	public static final String RT_URL = "https://api.twitter.com/oauth/request_token";
+//	public static final String AUTH_URL = "https://api.twitter.com/oauth/authorize";
+//	public static final String AT_URL = "https://api.twitter.com/oauth/access_token";
+//	public static final String CB_URL = "http://jcornor.com:8000/twit/callback";		// callback url
+//	public static final String RES_URL = "https://api.twitter.com/1.1/statuses/home_timeline.json";
+	
+	
+	public static final String CK = "1000002-234fb1c120dad4e7246813ad443e82bc";
+	public static final String CS = "d7b57956457698322b0bd29658faa187";
+	public static final String RT_URL = "http://tfactory.com:8000/tSimpleProvider/auth/request_token";
+	public static final String AUTH_URL = "http://tfactory.com:8000/tSimpleProvider/auth/authorize";
+	public static final String AT_URL = "http://tfactory.com:8000/tSimpleProvider/auth/access_token";
 	public static final String CB_URL = "http://jcornor.com:8000/twit/callback";		// callback url
-	public static final String RES_URL = "https://api.twitter.com/1.1/statuses/home_timeline.json";
+	public static final String RES_URL = "http://tfactory.com:8000/tSimpleProvider/auth/myinfo";
 }

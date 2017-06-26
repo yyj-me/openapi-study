@@ -1,0 +1,14 @@
+	public static AccessTokenVO generateAccessToken(UsersVO usersVO, ConsumerVO consumerVO) {
+		String tokenBase = usersVO.getUserno()+ "&" +consumerVO.getConsumerKey();
+		String accessToken = usersVO.getUserno() + "-" + DigestUtils.md5Hex(tokenBase);
+		
+		String accessTokenSecret = getAccessTokenSecret(
+				usersVO.getPassword(), consumerVO.getConsumerSecret()); 
+		return new AccessTokenVO(accessToken, accessTokenSecret, usersVO.getUserid(), usersVO.getUserno()); 
+	}
+	
+	public static String getAccessTokenSecret(String password, String consumerSecret) {
+		String secretBase = password + "&" +consumerSecret;
+		String accessTokenSecret = DigestUtils.md5Hex(secretBase);
+		return accessTokenSecret;
+	}

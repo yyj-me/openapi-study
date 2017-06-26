@@ -1,0 +1,11 @@
+c:\users\administrator\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\TistoryClient.exe.config
+c:\users\administrator\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\TistoryClient.exe
+c:\users\administrator\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\TistoryClient.pdb
+c:\users\administrator\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\administrator\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\TistoryClient.AuthorizeForm.resources
+c:\users\administrator\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\TistoryClient.Form1.resources
+c:\users\administrator\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\TistoryClient.Properties.Resources.resources
+c:\users\administrator\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ResGen.read.1.tlog
+c:\users\administrator\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\ResGen.write.1.tlog
+c:\users\administrator\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\TistoryClient.exe
+c:\users\administrator\documents\visual studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Debug\TistoryClient.pdb

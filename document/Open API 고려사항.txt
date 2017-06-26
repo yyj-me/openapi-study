@@ -1,0 +1,34 @@
+*** 1. 개발될 클라이언트의 UI를 고려한 입출력 형식 정의
+  - parameter
+
+(예) paging
+blog?page=1&pagesize=5 : scrolling mobile 환경에 맞지 않음...
+twit?max_id=A  :A이전의 글 조회 (scrolling UI에 적합)
+twit?since=B   :B시점 이후의 새글 조회 api
+
+  - 요청 형식 : 다양한 형식에 유연하게 대응..
+    * application/x-www-form-urlencoded
+    * application/json
+    * application/xml
+    * text/csv
+    * audio/mpeg
+
+*** 2. Client 개발자를 배려한 서비스
+ - API Console (twitter서비스 : https://dev.twitter.com/rest/tools/console)
+ - Playground
+ - Documentation (documentaion 자동화 tool : Spring fox swagger, SwaggerUI, SwaggerEditor..)
+
+3. RESTful Service == Open API?
+ - API(Application Programming Interface)!
+ - RESTful Service를 Interface라 부를 수 있는가?
+ - RESTful Service에 대한 전용 SDK 지원으로 해결(ex: facebook, google)
+    * 지도 API
+    * Google Chart API
+    * Facebook SDK
+
+4. 다양한 접근 방법 지원
+ - Facebook
+  * 플러그인
+  * 다이얼로그
+  * 코드 생성기
+- youtube

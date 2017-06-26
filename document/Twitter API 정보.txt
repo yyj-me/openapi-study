@@ -10,3 +10,15 @@ App-only authentication	https://api.twitter.com/oauth2/token
 Request token URL	https://api.twitter.com/oauth/request_token
 Authorize URL	https://api.twitter.com/oauth/authorize
 Access token URL	https://api.twitter.com/oauth/access_token
+
+
+
+https://api.twitter.com/oauth/request_token?oauth_consumer_key=1kaMBVZa1AEw27fcEYNLZZ2Xx&oauth_signature_method=HMAC-SHA1&oauth_callback=http%3A%2F%2Fjcornor.com%2FTestOAuth%2F&oauth_version=1.0&oauth_timestamp=1498099310&oauth_nonce=lcNBHT&oauth_signature=IA1CSYVOea89v4BrKektRaAQSE4%3D
+
+### my 인증 서버 정보 ####
+
+Application Name : Test Application
+등록된 날짜 : 2017-06-22
+Consumer Key : d628cdc1-45c7-49da-9e12-b923c5a584b1
+Consumer Secret : 1b805684367e6258bc6cf51aaa5b28bc
+Callback Url : http://jcornor:8000/twit/callback

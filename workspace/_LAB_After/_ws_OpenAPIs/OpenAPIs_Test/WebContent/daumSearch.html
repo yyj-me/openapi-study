@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>DAUM 동영상  검색</title>
+</head>
+<script type="text/javascript" src="js/jquery-1.6.1.js"> </script>
+<script src="js/urlEncodeUtil.js"></script>
+<script type="text/javascript">
+//전역변수
+var DAUM_API_KEY = "07675eb2fb6eb420b7a2e47d11390e255653f82f";
+var DAUM_API_URL = "http://apis.daum.net/search/vclip?";
+var page_index = 1;
+var page_size = 10;
+var page_count = 0;
+
+var params = { 				
+		"apikey" : DAUM_API_KEY,
+		"q" : "",
+		"result" : page_size, 
+		"sort" : "accuracy",		//정확도순
+		"output" : "json",
+		"pageno" : page_index	
+};
+
+function prevPage() {
+	if (page_index != 1 )
+		page_index--;
+	params.pageno = page_index;
+	ajaxQuery();
+}
+
+function nextPage() {
+	if (page_count > page_index)
+		page_index++;
+	params.pageno = page_index;
+	ajaxQuery();
+}
+
+function search() {
+	page_index = 1;
+	var keyword = $("#keyword").val();
+	params.q = keyword;
+	params.pageno = page_index;
+	ajaxQuery();
+}
+
+function ajaxQuery() {
+	var queryString = $.param(params);
+	var ajaxURL = DAUM_API_URL + queryString;
+
+	$.ajax({
+        type: "get",
+      	url: ajaxURL,
+        contentType: "plain/text; charset=utf-8",
+        dataType: "jsonp",
+        jsonp: "callback" ,
+        jsonpCallback: "parseAndDisplay"
+    });
+}
+
+function parseAndDisplay(json){
+	$("#paging").show();
+	$("#resultImages").html("");
+	
+	var temp=0;
+	var itemOne;
+	for (var i=0; i < json.channel.item.length; i++) {
+		temp++;
+		itemOne = json.channel.item[i];
+		var img = $("<img />").attr("src", itemOne.thumbnail).attr("border", "0").attr("alt", itemOne.title + "-" + itemOne.description);
+		var anchor = $("<a />").attr("href", itemOne.link).attr("target", "_new");
+		anchor.append(img);
+		$("#resultImages").append(anchor);
+		
+		if (temp % 5 == 0)
+			$("#resultImages").append("<br/>");
+		else
+			$("#resultImages").append(" ");
+	}
+		
+	page_count = json.channel.pageCount;
+	$("#pages").html(page_index + " / " + page_count);
+
+	
+}
+</script>
+<body>
+	<h1>Daum 동영상 검색</h1>
+	<hr/>
+	<div>
+		<input type="text" id="keyword" value="터미네이터" />
+		<input type="button" onclick="search()" value="검색" />
+	</div>
+	<div id="resultImages">
+	</div>
+	<div id="paging" style="display:none;">
+		<span style="cursor:hand;" onclick="prevPage()">◀</span>
+		<span id="pages"></span>
+		<span style="cursor:hand;" onclick="nextPage()">▶</span>
+	</div>
+</body>
+</html>

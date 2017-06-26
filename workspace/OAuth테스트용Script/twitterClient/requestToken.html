@@ -1,0 +1,52 @@
+<html>
+<head>
+	<title> Get Request Token</title>
+	<script type="text/javascript" src="js/sha1.js"></script>
+	<script type="text/javascript" src="js/oauth.js"></script>
+	<script type="text/javascript" >
+		
+		function getRequestToken() {
+			
+			var message = {
+				action: "https://api.twitter.com/oauth/request_token",
+				method: "GET",
+				parameters: {
+					oauth_consumer_key: "vpTrkYV9pgCMizTzL3SRLA",
+					oauth_signature_method: "HMAC-SHA1",
+					oauth_callback: "oob"
+				}
+			};
+
+			OAuth.setTimestampAndNonce(message);
+			OAuth.SignatureMethod.sign(message, {
+				consumerSecret: "4k0WaHhFQCbtMT87GVdWZ7sjizr8UArXp7XPQxRnRBY",
+				tokenSecret : ""
+				});
+			
+			var params = [];
+
+			for(var name in message.parameters) {
+				params.push(name + "=" + 
+				encodeURIComponent(message.parameters[name]));
+			}
+					
+			var url = message.action + "?" + params.join("&");
+
+			//document.getElementById("divRequest").innerHTML = url;
+			if (confirm('전송하시겠습니까?'))
+			{
+					window.location = url;
+			}
+
+			
+		}
+
+
+	</script>		
+
+</head>
+<body>
+	<button onclick="getRequestToken()"> Get Request Token </button>
+	<div id="divRequest"></div>
+</body>
+</html>

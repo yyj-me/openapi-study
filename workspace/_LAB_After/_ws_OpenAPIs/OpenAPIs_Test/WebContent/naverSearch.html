@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Naver 이미지 검색</title>
+</head>
+<script type="text/javascript" src="js/jquery-1.6.1.js"> </script>
+<script src="js/urlEncodeUtil.js"></script>
+<script type="text/javascript">
+
+	//전역변수
+	NAVER_API_KEY = "becbfd3499848d34e528dc9cf65efcf8";
+	NAVER_API_URL = "http://openapi.naver.com/search?";
+	var page_index = 1;
+	var page_size = 20;
+	var total_count = 0;
+	
+	var params = { 				
+			"key" : NAVER_API_KEY,
+			"target" : "image",
+			"query" : "",
+			"display" : page_size, 
+			"sort" : "sim",
+			"filter" : "all",
+			"start" : 1
+	};
+	
+	function search() {
+		page_index = 1;
+		var keyword = $("#keyword").val();
+		params.query = keyword;
+		params.start = 1;
+		ajaxQuery();
+	}
+	
+	function prevPage() {
+		if (page_index != 1 )
+			page_index--;
+		params.start = (page_index - 1) * page_size + 1;
+		ajaxQuery();
+	}
+	
+	function nextPage() {
+		page_index++;
+		params.start = (page_index - 1) * page_size + 1;
+		ajaxQuery();
+	}
+	
+	function ajaxQuery() {
+		var queryString = $.param(params);
+		var ajaxURL = "proxy.jsp?url=" + encodeURL(NAVER_API_URL + queryString);
+		
+		$.ajax({
+	        type: "get",
+	      	url: ajaxURL,
+	        contentType: "text/xml; charset=utf-8",
+	        dataType: "xml",
+	        error: function(xhr, status, error) {
+	            alert("error : " +status);
+	        },
+	        success: parseAndDisplay
+	    });
+	}
+
+	function parseAndDisplay(xml){
+		$("#paging").show();
+		$("#resultImages").html("");
+		var html = "";
+		var temp=0;
+		$(xml).find("rss").find("channel").find("item").each(function(idx) {
+			temp++;
+			var anchor = $("<a />").attr("href", $(this).find("link").text()).attr("target", "_new");
+			var img = $("<img />").attr("src", $(this).find("thumbnail").text()).attr("alt", $(this).find("title").text()).attr("style", "cursor:hand;").attr("border", "0");
+			anchor.append(img);
+			$("#resultImages").append(anchor);
+
+			if (temp % 5 == 0)
+				$("#resultImages").append("<br/>");
+			else
+				$("#resultImages").append(" ");
+ 		});
+		var totalCount = $(xml).find("total").text();
+		$("#pages").html(page_index + " / " + Math.ceil(totalCount / page_size))
+	}
+
+</script>
+<body>
+	<h1>Naver 이미지 검색</h1>
+	<hr/>
+	<div>
+		<input type="text" id="keyword" value="터미네이터" />
+		<input type="button" onclick="search()" value="검색" />
+	</div>
+	<div id="resultImages">
+
+	</div>
+	<div id="paging" style="display:none;">
+		<span style="cursor:hand;" onclick="prevPage()">◀</span>
+		<span id="pages">1/100 페이지</span>
+		<span style="cursor:hand;" onclick="nextPage()">▶</span>
+	</div>
+</body>
+</html>

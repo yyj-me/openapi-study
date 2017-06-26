@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>YouTube Search Videos!</title>
+<script type="text/javascript" src="http://swfobject.googlecode.com/svn/trunk/swfobject/swfobject.js"></script>
+<script type="text/javascript" src="js/jquery-1.6.1.js"> </script>
+<script type="text/javascript">
+var YOUTUBE_API_URL = "http://gdata.youtube.com/feeds/api/videos?";
+var page_index = 1;
+var page_size  = 10;
+
+var params = {
+		"q" : "",
+		"max-results" : page_size,
+		"alt" : "json-in-script",
+		"start-index" : "1",
+		"format" : "5",
+		"v" : "2"
+}
+
+function loadVideo(playerUrl, autoplay) {
+  swfobject.embedSWF(
+      playerUrl + '&rel=1&border=0&fs=1&autoplay=' + 
+      (autoplay?1:0), 'player', '480', '320', '9.0.0', false, 
+      false, {allowfullscreen: 'true'});
+}
+
+function prevPage() {
+	if (page_index != 1)
+		page_index--;
+	params["start-index"] = (page_index - 1) * page_size + 1;
+	ajaxQuery();
+}
+
+function nextPage() {
+	page_index++;
+	params["start-index"] = (page_index - 1) * page_size + 1;
+	ajaxQuery();
+}
+
+function search() {
+	page_index=1;
+	var keyword = $("#keyword").val();
+	params["start-index"] = 1;
+	params.q = keyword;
+	ajaxQuery();
+}
+
+function ajaxQuery() {
+	var queryString = $.param(params);
+	var ajaxURL = YOUTUBE_API_URL + queryString;
+	
+	$.ajax({
+        type: "get",
+      	url: ajaxURL,
+        contentType: "application/json; charset=utf-8",
+        dataType: "jsonp",
+        jsonp: "callback",
+        jsonpCallback: "showMyVideos"
+    });	
+}
+
+function showMyVideos(data) {
+	$("#paging").show();
+  var feed = data.feed;
+  var entries = feed.entry || [];
+  var ctl = $("<div />");
+  var temp = 0;
+  for (var i = 0; i < entries.length; i++) {
+	  temp++;
+    var entry = entries[i];
+    var title = entry.title.$t.substr(0, 20);
+    var thumbnailUrl = entries[i].media$group.media$thumbnail[0].url;
+    var playerUrl = entries[i].media$group.media$content[0].url;
+    var span = $("<span />").attr("onclick", "loadVideo('" + playerUrl + "', true);");
+    var img = $("<img />").attr("src", thumbnailUrl).attr("width", "130").attr("height", "97").attr("alt", title);
+	span.append(img);
+	ctl.append(span);
+	ctl.append(" ");
+	if (temp % 5 == 0)  
+		ctl.append("<br/>");
+  }
+  $("#videosList").html(ctl.html());
+  var totalCount = data.feed.openSearch$totalResults.$t;
+
+  $("#pages").html(page_index + " / " + Math.ceil(totalCount / page_size))
+
+  
+  if (entries.length > 0) {
+    loadVideo(entries[0].media$group.media$content[0].url, false);
+  }
+}
+</script>
+</head>
+<body>
+	<h1>YOUTUBE 동영상 검색</h1>
+	<hr/>
+	<div>
+		<input type="text" id="keyword" value="terminator2" />
+		<input type="button" onclick="search()" value="검  색" />
+	</div>
+	<div id="playerContainer" style="width:100%;">
+    	<object id="player"></object>
+	</div>
+	<div id="videosList"></div>
+	<br/>
+	<div id="paging" style="display:none;">
+		<span style="cursor:hand;" onclick="prevPage()">◀</span>
+		<span id="pages"></span>
+		<span style="cursor:hand;" onclick="nextPage()">▶</span>
+	</div>
+</body>
+</html>

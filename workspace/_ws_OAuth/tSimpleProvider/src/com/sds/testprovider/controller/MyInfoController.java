@@ -31,6 +31,10 @@ public class MyInfoController {
 	@Resource(name="xmlTemplate")
 	private View xmlView;
 	
+
+	@Resource(name="jsonTemplate")
+	private View jsonView;
+	
 	@Autowired
 	private Jaxb2Marshaller jaxb2Mashaller;
 	
@@ -42,7 +46,7 @@ public class MyInfoController {
 		ModelAndView mav = new ModelAndView();
 		try {
 			UsersVO usersVO = validateOAuthToken(request);
-			mav.setView(xmlView);
+			mav.setView(jsonView);
 			mav.addObject(usersVO);
 		} catch (Exception e) {
 			throw new Exception (e.getMessage());
@@ -50,9 +54,16 @@ public class MyInfoController {
 		return mav;
 	}
 	
-	//Session으로 이미 인증이 되었거나  OAuthToken이 유효하다면 접근 가능!
+	//
 	private UsersVO validateOAuthToken(HttpServletRequest request) throws Exception {
-		//아래 return 문을 주석 처리하고 코드를 작성합니다.
-		return null;
+		OAuthTokenParam param = new OAuthTokenParam(request);
+		
+		long userNo = param.getUserNo();
+		String consumerKey = param.getConsumerKey();
+		UsersVO usersVO = usersService.selectUserByUserNo(userNo);
+		ConsumerVO consumerVO = consumerService.selectByConsumerKey(consumerKey);
+		
+		param.validateRequestToken(consumerVO.getConsumerSecret(), usersVO.getPassword());
+		return usersVO;
 	}
 }
